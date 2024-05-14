@@ -1,0 +1,30 @@
+{
+  "name": "ruibaireact",
+  "version": "10.0.0",
+  "homepage": "http://ruibai.xyz/ruibaireact",
+  "repository": {
+    "type": "git",
+    "url": "https://codebase.ruibai.xyz/rd/ruibai-ui-library-group/ruibai-react-library-project.git"
+  },
+  "main": "ruibaireact.all.min.js",
+  "unpkg": "ruibaireact.all.min.js",
+  "jsdelivr": "ruibaireact.all.min.js",
+  "module": "ruibaireact.all.esm.min.js",
+  "license": "ROSEWIL LICENSE",
+  "keywords": [
+    "ruibai-react",
+    "react",
+    "ui framework",
+    "component framework",
+    "ui library",
+    "component library",
+    "material",
+    "bootstrap",
+    "react components",
+    "responsive components"
+  ],
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

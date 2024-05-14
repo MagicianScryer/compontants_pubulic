@@ -1,0 +1,12 @@
+{
+  "name": "rbcontext",
+  "version": "1.0.0",
+  "main": "./rbcontext.cjs.js",
+  "module": "./rbcontext.esm.js",
+  "unpkg": "./rbcontext.min.js",
+  "types": "./rbcontext.d.ts",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

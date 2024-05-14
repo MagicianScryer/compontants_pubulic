@@ -1,0 +1,6 @@
+{
+  "main": "./rbautocomplete.cjs.js",
+  "module": "./rbautocomplete.esm.js",
+  "unpkg": "./rbautocomplete.min.js",
+  "types": "./rbautocomplete.d.ts"
+}

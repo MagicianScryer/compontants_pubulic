@@ -1,0 +1,36 @@
+/* Customizations to the designer theme should be defined here */
+.p-ring-prev {
+  width: 4rem;
+  height: 4rem;
+
+  .p-ring-prev-icon {
+    width: 4rem;
+    height: 4rem;
+    background-image: url('./images/s_arrow_left.png');
+    background-size: cover;
+  }
+
+  &.p-disabled {
+    .p-ring-prev-icon {
+      background-image: url('./images/n_arrow_left.png');
+    }
+  }
+}
+
+.p-ring-next {
+  width: 4rem;
+  height: 4rem;
+
+  .p-ring-next-icon {
+    width: 4rem;
+    height: 4rem;
+    background-image: url('./images/s_arrow_right.png');
+    background-size: cover;
+  }
+
+  &.p-disabled {
+    .p-ring-next-icon {
+      background-image: url('./images/n_arrow_right.png');
+    }
+  }
+}

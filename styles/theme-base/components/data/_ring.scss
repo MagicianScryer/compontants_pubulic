@@ -1,0 +1,37 @@
+.p-ring {
+    .p-ring-content {
+        .p-ring-prev,
+        .p-ring-next {
+            @include action-icon();
+            margin: $inlineSpacing;
+        }
+    }
+
+    .p-ring-indicators {
+        padding: $carouselIndicatorsPadding;
+
+        .p-ring-indicator {
+            margin-right: $inlineSpacing;
+            margin-bottom: $inlineSpacing;
+           
+            button {
+                background-color: $carouselIndicatorBg;
+                width: $carouselIndicatorWidth;
+                height: $carouselIndicatorHeight;
+                transition: $actionIconTransition;
+                border-radius: $carouselIndicatorBorderRadius;
+
+                &:hover {
+                    background: $carouselIndicatorHoverBg;
+                }
+            }
+
+            &.p-highlight {
+                button {
+                    background: $highlightBg;
+                    color: $highlightTextColor;
+                }
+            }
+        }
+    }
+}

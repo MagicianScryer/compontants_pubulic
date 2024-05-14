@@ -1,0 +1,22 @@
+.layout-content {
+    padding: 4rem 4rem 0 4rem;
+    display: flex;
+
+    .layout-content-slot {
+        flex: 1 1 auto;
+        width: 1%;
+    }
+}
+
+.layout-splitter-panel {
+    overflow: hidden;
+    background-color: var(--surface-ground);
+}
+
+.card {
+    background: var(--surface-card);
+    border: var(--card-border);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
