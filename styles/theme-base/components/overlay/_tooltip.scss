@@ -1,10 +1,10 @@
 .p-tooltip {
     .p-tooltip-text {
-        background: $tooltipBg;
-        color: $tooltipTextColor;
         padding: $tooltipPadding;
-        box-shadow: $inputOverlayShadow;
+        color: $tooltipTextColor;
+        background: $tooltipBg;
         border-radius: $borderRadius;
+        box-shadow: $inputOverlayShadow;
     }
 
     &.p-tooltip-right {

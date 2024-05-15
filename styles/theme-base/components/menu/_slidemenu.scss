@@ -1,13 +1,13 @@
 .p-slidemenu {
+    width: $menuWidth;
     padding: $verticalMenuPadding;
-    background: $menuBg;
     color: $menuTextColor;
+    background: $menuBg;
     border: $menuBorder;
     border-radius: $borderRadius;
-    width: $menuWidth;
 
     .p-menuitem-link {
-        @include menuitem-link();
+        @include menuitem-link;
     }
 
     &.p-slidemenu-overlay {
@@ -40,8 +40,8 @@
     }
 
     .p-slidemenu-separator {
-        border-top: $divider;
         margin: $menuSeparatorMargin;
+        border-top: $divider;
     }
 
     .p-slidemenu-icon {

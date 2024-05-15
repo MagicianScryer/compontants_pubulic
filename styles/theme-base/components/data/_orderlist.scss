@@ -8,14 +8,14 @@
     }
 
     .p-orderlist-header {
-        background: $panelHeaderBg;
-        color: $panelHeaderTextColor;
-        border: $panelHeaderBorder;
         padding: $panelHeaderPadding;
         font-weight: $panelHeaderFontWeight;
+        color: $panelHeaderTextColor;
+        background: $panelHeaderBg;
+        border: $panelHeaderBorder;
         border-bottom: 0 none;
-        border-top-right-radius: $borderRadius;
         border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
     }
 
     .p-orderlist-filter-container {
@@ -35,28 +35,28 @@
     }
 
     .p-orderlist-list {
-        border: $panelContentBorder;
-        background: $panelContentBg;
-        color: $panelContentTextColor;
         padding: $inputListPadding;
+        color: $panelContentTextColor;
+        background: $panelContentBg;
+        border: $panelContentBorder;
         border-bottom-right-radius: $borderRadius;
         border-bottom-left-radius: $borderRadius;
 
         .p-orderlist-item {
             padding: $inputListItemPadding;
             margin: $inputListItemMargin;
-            border: $inputListItemBorder;
             color: $inputListItemTextColor;
             background: $inputListItemBg;
+            border: $inputListItemBorder;
             transition: transform $transitionDuration, $listItemTransition;
 
             &:not(.p-highlight):hover {
-                background: $inputListItemHoverBg;
                 color: $inputListItemTextHoverColor;
+                background: $inputListItemHoverBg;
             }
 
             &:focus {
-                @include focused-listitem();
+                @include focused-listitem;
             }
 
             &.p-highlight {

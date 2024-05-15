@@ -8,36 +8,36 @@
             margin-right: $tabviewHeaderSpacing;
 
             .p-tabview-nav-link {
-                border: $tabviewHeaderBorder;
-                border-width: $tabviewHeaderBorderWidth;
-                border-color: $tabviewHeaderBorderColor;
-                background: $tabviewHeaderBg;
-                color: $tabviewHeaderTextColor;
                 padding: $tabviewHeaderPadding;
-                font-weight: $tabviewHeaderFontWeight;
-                border-top-right-radius: $borderRadius;
-                border-top-left-radius: $borderRadius;
-                transition: $listItemTransition;
                 margin: $tabviewHeaderMargin;
+                font-weight: $tabviewHeaderFontWeight;
+                color: $tabviewHeaderTextColor;
+                background: $tabviewHeaderBg;
+                border: $tabviewHeaderBorder;
+                border-color: $tabviewHeaderBorderColor;
+                border-width: $tabviewHeaderBorderWidth;
+                border-top-left-radius: $borderRadius;
+                border-top-right-radius: $borderRadius;
+                transition: $listItemTransition;
 
                 &:not(.p-disabled):focus-visible {
-                    @include focused-inset();
+                    @include focused-inset;
                 }
             }
 
-            &:not(.p-highlight):not(.p-disabled):hover {
+            &:not(.p-highlight, .p-disabled):hover {
                 .p-tabview-nav-link {
+                    color: $tabviewHeaderTextHoverColor;
                     background: $tabviewHeaderHoverBg;
                     border-color: $tabviewHeaderHoverBorderColor;
-                    color: $tabviewHeaderTextHoverColor;
                 }
             }
 
             &.p-highlight {
                 .p-tabview-nav-link {
+                    color: $tabviewHeaderTextActiveColor;
                     background: $tabviewHeaderActiveBg;
                     border-color: $tabviewHeaderActiveBorderColor;
-                    color: $tabviewHeaderTextActiveColor;
                 }
             }
         }
@@ -48,22 +48,22 @@
     }
     
     .p-tabview-nav-btn.p-link {
-        background: $tabviewHeaderActiveBg;
-        color: $tabviewHeaderTextActiveColor;
         width: $buttonIconOnlyWidth;
-        box-shadow: $raisedButtonShadow;
+        color: $tabviewHeaderTextActiveColor;
+        background: $tabviewHeaderActiveBg;
         border-radius: 0;
+        box-shadow: $raisedButtonShadow;
 
         &:focus-visible {
-            @include focused-inset();
+            @include focused-inset;
         }
     }
 
     .p-tabview-panels {
-        background: $tabviewContentBg;
         padding: $tabviewContentPadding;
-        border: $tabviewContentBorder;
         color: $tabviewContentTextColor;
+        background: $tabviewContentBg;
+        border: $tabviewContentBorder;
         border-bottom-right-radius: $borderRadius;
         border-bottom-left-radius: $borderRadius;
     }

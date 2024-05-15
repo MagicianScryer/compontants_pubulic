@@ -1,11 +1,11 @@
 .p-inputgroup-addon {
-    background: $inputGroupBg;
-    color: $inputGroupTextColor;
-    border-top: $inputBorder;
-    border-left: $inputBorder;
-    border-bottom: $inputBorder;
-    padding: $inputPadding;
     min-width: $inputGroupAddOnMinWidth;
+    padding: $inputPadding;
+    color: $inputGroupTextColor;
+    background: $inputGroupBg;
+    border-top: $inputBorder;
+    border-bottom: $inputBorder;
+    border-left: $inputBorder;
 
     &:last-child {
         border-right: $inputBorder;
@@ -16,8 +16,8 @@
     > .p-component,
     > .p-inputwrapper > .p-inputtext,
     > .p-float-label > .p-component {
-        border-radius: 0;
         margin: 0;
+        border-radius: 0;
 
         + .p-inputgroup-addon {
             border-left: 0 none;

@@ -1,28 +1,28 @@
 .p-paginator {
-    background: $paginatorBg;
+    padding: $paginatorPadding;
     color: $paginatorTextColor;
+    background: $paginatorBg;
     border: $paginatorBorder;
     border-width: $paginatorBorderWidth;
-    padding: $paginatorPadding;
     border-radius: $borderRadius;
 
     .p-paginator-first,
     .p-paginator-prev,
     .p-paginator-next,
     .p-paginator-last {
-        background-color: $paginatorElementBg;
-        border: $paginatorElementBorder;
-        color: $paginatorElementIconColor;
         min-width: $paginatorElementWidth;
         height: $paginatorElementHeight;
         margin: $paginatorElementMargin;
-        transition: $listItemTransition;
+        color: $paginatorElementIconColor;
+        background-color: $paginatorElementBg;
+        border: $paginatorElementBorder;
         border-radius: $paginatorElementBorderRadius;
+        transition: $listItemTransition;
 
-        &:not(.p-disabled):not(.p-highlight):hover {
+        &:not(.p-disabled, .p-highlight):hover {
+            color: $paginatorElementIconHoverColor;
             background: $paginatorElementHoverBg;
             border-color: $paginatorElementHoverBorderColor;
-            color: $paginatorElementIconHoverColor;
         }
     }
 
@@ -37,8 +37,8 @@
     }
 
     .p-dropdown {
-        margin-left: $inlineSpacing;
         height: $paginatorElementHeight;
+        margin-left: $inlineSpacing;
 
         .p-dropdown-label {
             padding-right: 0;
@@ -46,8 +46,8 @@
     }
 
     .p-paginator-page-input {
-        margin-left: $inlineSpacing;
         margin-right: $inlineSpacing;
+        margin-left: $inlineSpacing;
 
         .p-inputtext {
             max-width: $paginatorElementWidth;
@@ -55,36 +55,36 @@
     }
 
     .p-paginator-current {
-        background-color: $paginatorElementBg;
-        border: $paginatorElementBorder;
-        color: $paginatorElementIconColor;
         min-width: $paginatorElementWidth;
         height: $paginatorElementHeight;
-        margin: $paginatorElementMargin;
         padding: 0 $inlineSpacing;
+        margin: $paginatorElementMargin;
+        color: $paginatorElementIconColor;
+        background-color: $paginatorElementBg;
+        border: $paginatorElementBorder;
     }
 
     .p-paginator-pages {
         .p-paginator-page {
-            background-color: $paginatorElementBg;
-            border: $paginatorElementBorder;
-            color: $paginatorElementIconColor;
             min-width: $paginatorElementWidth;
             height: $paginatorElementHeight;
             margin: $paginatorElementMargin;
-            transition: $listItemTransition;
+            color: $paginatorElementIconColor;
+            background-color: $paginatorElementBg;
+            border: $paginatorElementBorder;
             border-radius: $paginatorElementBorderRadius;
+            transition: $listItemTransition;
 
             &.p-highlight {
+                color: $highlightTextColor;
                 background: $highlightBg;
                 border-color: $highlightBg;
-                color: $highlightTextColor;
             }
 
             &:not(.p-highlight):hover {
+                color: $paginatorElementIconHoverColor;
                 background: $paginatorElementHoverBg;
                 border-color: $paginatorElementHoverBorderColor;
-                color: $paginatorElementIconHoverColor;
             }
         }
     }

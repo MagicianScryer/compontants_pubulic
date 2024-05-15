@@ -18,21 +18,21 @@
         width: $sliderVerticalWidth;
 
         .p-slider-handle {
-            margin-left: math.div(-1 * $sliderHandleWidth, 2);
             margin-bottom: math.div(-1 * $sliderHandleHeight, 2);
+            margin-left: math.div(-1 * $sliderHandleWidth, 2);
         }
     }
 
     .p-slider-handle {
-        height: $sliderHandleHeight;
         width: $sliderHandleWidth;
+        height: $sliderHandleHeight;
         background: $sliderHandleBg;
         border: $sliderHandleBorder;
         border-radius: $sliderHandleBorderRadius;
         transition: $formElementTransition;
 
         &:focus {
-            @include focused();
+            @include focused;
         }
     }
 

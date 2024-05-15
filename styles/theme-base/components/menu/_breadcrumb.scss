@@ -1,17 +1,17 @@
 .p-breadcrumb {
+	padding: $breadcrumbPadding;
 	background: $breadcrumbBg;
 	border: $breadcrumbBorder;
 	border-radius: $borderRadius;
-	padding: $breadcrumbPadding;
 
 	.p-breadcrumb-list {
 		li {
 			.p-menuitem-link {
-				transition: $listItemTransition;
 				border-radius: $borderRadius;
+				transition: $listItemTransition;
 
 				&:focus-visible {
-					@include focused();
+					@include focused;
 				}
 
 				.p-menuitem-text {
@@ -24,7 +24,7 @@
 			}
 
 			&.p-menuitem-separator {
-				margin: 0 $inlineSpacing 0 $inlineSpacing;
+				margin: 0 $inlineSpacing;
 				color: $breadcrumbSeparatorColor;
 			}
 

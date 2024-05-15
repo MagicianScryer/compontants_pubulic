@@ -1,6 +1,6 @@
 .p-mention-panel {
-    background: $inputOverlayBg;
     color: $inputListTextColor;
+    background: $inputOverlayBg;
     border: $inputOverlayBorder;
     border-radius: $borderRadius;
     box-shadow: $inputOverlayShadow;
@@ -9,13 +9,13 @@
         padding: $inputListPadding;
 
         .p-mention-item {
-            margin: $inputListItemMargin;
             padding: $inputListItemPadding;
-            border: $inputListItemBorder;
+            margin: $inputListItemMargin;
             color: $inputListItemTextColor;
             background: $inputListItemBg;
-            transition: $listItemTransition;
+            border: $inputListItemBorder;
             border-radius: $inputListItemBorderRadius;
+            transition: $listItemTransition;
 
             &:hover {
                 color: $inputListItemTextHoverColor;

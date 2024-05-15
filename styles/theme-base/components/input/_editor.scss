@@ -1,8 +1,8 @@
 .p-editor-container {
     .p-editor-toolbar {
         background: $editorToolbarBg;
-        border-top-right-radius: $borderRadius;
         border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
 
         &.ql-snow {
             border: $editorToolbarBorder;
@@ -17,8 +17,8 @@
     
             .ql-picker {
                 .ql-picker-label {
-                    border: 0 none;
                     color: $editorToolbarIconColor;
+                    border: 0 none;
 
                     &:hover {
                         color: $editorToolbarIconHoverColor;
@@ -47,11 +47,11 @@
                     }
 
                     .ql-picker-options {
+                        padding: $inputListPadding;
                         background: $inputOverlayBg;
                         border:$inputOverlayBorder;
-                        box-shadow:$inputOverlayShadow;
                         border-radius: $borderRadius;
-                        padding: $inputListPadding;
+                        box-shadow:$inputOverlayShadow;
 
                         .ql-picker-item {
                             color: $inputListItemTextColor;
@@ -82,8 +82,8 @@
         }
 
         .ql-editor {
-            background: $inputBg;
             color: $inputTextColor;
+            background: $inputBg;
             border-bottom-right-radius: $borderRadius;
             border-bottom-left-radius: $borderRadius;
         }

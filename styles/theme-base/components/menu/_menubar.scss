@@ -1,7 +1,7 @@
 .p-menubar {
 	padding: $horizontalMenuPadding;
-	background: $horizontalMenuBg;
 	color: $horizontalMenuTextColor;
+	background: $horizontalMenuBg;
 	border: $horizontalMenuBorder;
 	border-radius: $borderRadius;
 
@@ -9,24 +9,24 @@
 		outline: 0 none;
 
 		> .p-menuitem {
-			@include horizontal-rootmenuitem-link();
+			@include horizontal-rootmenuitem-link;
 		}
 	}
 
 	.p-menuitem {
-		@include menuitem-link();
+		@include menuitem-link;
 	}
 
 	.p-submenu-list {
+		width: $menuWidth;
 		padding: $verticalMenuPadding;
 		background: $overlayMenuBg;
 		border: $overlayMenuBorder;
 		box-shadow: $overlayMenuShadow;
-		width: $menuWidth;
 
 		.p-menuitem-separator {
-			border-top: $divider;
 			margin: $menuSeparatorMargin;
+			border-top: $divider;
 		}
 
 		.p-submenu-icon {
@@ -48,7 +48,7 @@
 			}
 
 			&:focus {
-				@include focused();
+				@include focused;
 			}
 		}
 
@@ -59,8 +59,8 @@
 			box-shadow: $overlayMenuShadow;
 
 			.p-menuitem-separator {
-				border-top: $divider;
 				margin: $menuSeparatorMargin;
+				border-top: $divider;
 			}
 
 			.p-submenu-icon {
@@ -110,7 +110,7 @@
 	}
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (width <= 960px) {
 	.p-menubar {
 		position: relative;
 
@@ -128,22 +128,22 @@
 			}
 
 			&:focus {
-				@include focused();
+				@include focused;
 			}
 		}
 
 		.p-menubar-root-list {
 			position: absolute;
 			display: none;
+			width: 100%;
 			padding: $verticalMenuPadding;
 			background: $overlayMenuBg;
 			border: $overlayMenuBorder;
 			box-shadow: $overlayMenuShadow;
-			width: 100%;
 
 			.p-menu-separator {
-				border-top: $divider;
 				margin: $menuSeparatorMargin;
+				border-top: $divider;
 			}
 
 			.p-submenu-icon {
@@ -156,11 +156,11 @@
 			}
 
 			> .p-menuitem {
-				width: 100%;
 				position: static;
+				width: 100%;
 
 				> .p-menuitem-link {
-					@include menuitem-link();
+					@include menuitem-link;
 
 					> .p-submenu-icon {
 						margin-left: auto;
@@ -178,10 +178,10 @@
 			}
 
 			.p-submenu-list {
-				width: 100%;
 				position: static;
-				box-shadow: none;
+				width: 100%;
 				border: 0 none;
+				box-shadow: none;
 
 				.p-submenu-icon {
 					transition: transform $transitionDuration;
@@ -198,19 +198,19 @@
 			}
 
 			.p-menuitem {
-				width: 100%;
 				position: static;
+				width: 100%;
 			}
 
 			@include nested-submenu-indents(nth($menuitemPadding, 1), 2, 10);
 		}
 
 		&.p-menubar-mobile-active .p-menubar-root-list {
-			display: flex;
-			flex-direction: column;
 			top: 100%;
 			left: 0;
 			z-index: 1;
+			display: flex;
+			flex-direction: column;
 		}
 	}
 }

@@ -1,10 +1,10 @@
 .p-tieredmenu {
+	width: $menuWidth;
 	padding: $verticalMenuPadding;
-	background: $menuBg;
 	color: $menuTextColor;
+	background: $menuBg;
 	border: $menuBorder;
 	border-radius: $borderRadius;
-	width: $menuWidth;
 
 	&.p-tieredmenu-overlay {
 		background: $overlayMenuBg;
@@ -24,12 +24,12 @@
 	}
 
 	.p-menuitem {
-		@include menuitem-link();
+		@include menuitem-link;
 	}
 
 	.p-menuitem-separator {
-		border-top: $divider;
 		margin: $menuSeparatorMargin;
+		border-top: $divider;
 	}
 
 	.p-submenu-icon {

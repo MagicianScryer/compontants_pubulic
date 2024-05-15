@@ -2,10 +2,9 @@
     @if variable-exists(colors) {
         @each $name, $color in $colors {
             @for $i from 0 through 5 {
-                @if ($i == 0) {
+                @if $i == 0 {
                     --#{$name}-50:#{tint($color, (5 - $i) * 19%)};
-                }
-                @else {
+                } @else {
                     --#{$name}-#{$i * 100}:#{tint($color, (5 - $i) * 19%)};
                 }
             }

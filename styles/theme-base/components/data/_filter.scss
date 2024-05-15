@@ -9,31 +9,31 @@
     width: $actionIconWidth;
     height: $actionIconHeight;
     color: $actionIconColor;
-    border: $actionIconBorder;
     background: $actionIconBg;
+    border: $actionIconBorder;
     border-radius: $actionIconBorderRadius;
     transition: $actionIconTransition;
 
     &:hover {
         color: $actionIconHoverColor;
-        border-color: $actionIconHoverBorderColor;
         background: $actionIconHoverBg;
+        border-color: $actionIconHoverBorderColor;
     }
 
     &.p-column-filter-menu-button-open,
     &.p-column-filter-menu-button-open:hover {
-        background: $actionIconHoverBg;
         color: $actionIconHoverColor;
+        background: $actionIconHoverBg;
     }
 
     &.p-column-filter-menu-button-active,
     &.p-column-filter-menu-button-active:hover {
-        background: $highlightBg;
         color: $highlightTextColor;
+        background: $highlightBg;
     }
 
     &:focus-visible {
-        @include focused();
+        @include focused;
     }
 
 }
@@ -42,60 +42,60 @@
     width: $actionIconWidth;
     height: $actionIconHeight;
     color: $actionIconColor;
-    border: $actionIconBorder;
     background: $actionIconBg;
+    border: $actionIconBorder;
     border-radius: $actionIconBorderRadius;
     transition: $actionIconTransition;
 
     &:hover {
         color: $actionIconHoverColor;
-        border-color: $actionIconHoverBorderColor;
         background: $actionIconHoverBg;
+        border-color: $actionIconHoverBorderColor;
     }
 
     &:focus-visible {
-        @include focused();
+        @include focused;
     }
 }
 
 .p-column-filter-overlay {
-    background: $inputOverlayBg;
+    min-width: $menuWidth;
     color: $inputListTextColor;
+    background: $inputOverlayBg;
     border: $inputOverlayBorder;
     border-radius: $borderRadius;
     box-shadow: $inputOverlayShadow;
-    min-width: $menuWidth;
 
     .p-column-filter-row-items {
         padding: $inputListPadding;
 
         .p-column-filter-row-item {
-            margin: $inputListItemMargin;
             padding: $inputListItemPadding;
-            border: $inputListItemBorder;
+            margin: $inputListItemMargin;
             color: $inputListItemTextColor;
             background: $inputListItemBg;
-            transition: $listItemTransition;
+            border: $inputListItemBorder;
             border-radius: $inputListItemBorderRadius;
+            transition: $listItemTransition;
 
             &.p-highlight {
                 color: $highlightTextColor;
                 background: $highlightBg;
             }
 
-            &:not(.p-highlight):not(.p-disabled):hover {
+            &:not(.p-highlight, .p-disabled):hover {
                 color: $inputListItemTextHoverColor;
                 background: $inputListItemHoverBg;
             }
 
             &:focus-visible {
-                @include focused-listitem();
+                @include focused-listitem;
             }
         }
 
         .p-column-filter-separator {
-            border-top: $divider;
             margin: $menuSeparatorMargin;
+            border-top: $divider;
         }
     }
 }
@@ -103,12 +103,12 @@
 .p-column-filter-overlay-menu {
     .p-column-filter-operator {
         padding: $inputListHeaderPadding;
-        border-bottom: $inputListHeaderBorder;
+        margin: $inputListHeaderMargin;
         color: $inputListHeaderTextColor;
         background: $inputOverlayHeaderBg;
-        margin: $inputListHeaderMargin;
-        border-top-right-radius: $borderRadius;
+        border-bottom: $inputListHeaderBorder;
         border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
     }
 
     .p-column-filter-constraint {

@@ -1,15 +1,15 @@
 .layout-sidebar {
     position: sticky;
-    left: 0;
     top: 6rem;
+    left: 0;
+    display: flex;
+    flex: 0 0 250px;
+    flex-direction: column;
     height: calc(100vh - 9rem);
+    padding: 0;
+    overflow: auto;
     user-select: none;
     transition: transform .4s cubic-bezier(.05,.74,.2,.99), opacity .3s;
-    display: flex;
-    flex-direction: column;
-    padding: 0 0 0 0;
-    flex: 0 0 250px;
-    overflow: auto;
 
     .logo {
         display: flex;
@@ -17,15 +17,15 @@
     }
 
     nav {
+        flex-grow: 1;
         padding: 0 1rem 0 0;
         margin: 0;
-        flex-grow: 1;
     }
 
     .layout-menu {
-        list-style: none;
-        margin: 0;
         padding: 0;
+        margin: 0;
+        list-style: none;
 
         > li {
             margin-bottom: .25rem;
@@ -33,23 +33,23 @@
             > button, 
             > a {
                 display: flex;
-                width: 100%;
                 align-items: center;
+                width: 100%;
                 padding: .5rem 0;
-                color: var(--surface-900);
                 font-weight: 600;
-                transition: all .2s;
+                color: var(--surface-900);
                 border-radius: var(--border-radius);
+                transition: all .2s;
 
                 .menu-icon {
-                    width: 2rem;
-                    height: 2rem;
-                    border-radius: var(--border-radius);
-                    margin-right: .5rem;
-                    border: 1px solid var(--surface-border);
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
+                    width: 2rem;
+                    height: 2rem;
+                    margin-right: .5rem;
+                    border: 1px solid var(--surface-border);
+                    border-radius: var(--border-radius);
                     transition: all .2s;
     
                     i {
@@ -59,8 +59,8 @@
                 }
     
                 .menu-toggle-icon {
-                    color: var(--surface-700);
                     margin-left: auto;
+                    color: var(--surface-700);
                 }
 
                 &:hover {
@@ -90,19 +90,17 @@
             
             > div {
                 ol {
-                    margin: 0 0 0 1rem;
                     padding: .25rem 0;
+                    margin: 0 0 0 1rem;
                     list-style: none;
 
                     li {
                         a {
-                            color: var(--surface-700);
-                            border-left: 1px solid var(--surface-border);
-                            transition: all .2s;
-                            font-weight: 450;
                             display: flex;
                             padding: .5rem .5rem .5rem 1rem;
+                            font-weight: 450;
                             color: var(--surface-700);
+                            border-left: 1px solid var(--surface-border);
                             transition: all .2s;
 
                             &:focus-visible {
@@ -122,8 +120,8 @@
                         }
 
                         ol {
-                            margin: 0;
                             padding: 0;
+                            margin: 0;
                         }
 
 
@@ -133,7 +131,7 @@
                         }
 
                         &:has(.menu-child-category):first-child {
-                            margin-top: 0rem;
+                            margin-top: 0;
                         }
                     }
                 }
@@ -143,11 +141,11 @@
         .menu-child-category {
             display: flex;
             padding: .5rem .5rem .5rem 0;
+            margin-bottom: .25rem;
             font-size: .875rem;
             font-weight: 600;
-            letter-spacing: 1px;
             color: var(--surface-900);
-            margin-bottom: .25rem;
+            letter-spacing: 1px;
         }
     }
 }

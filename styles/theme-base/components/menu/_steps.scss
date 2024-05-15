@@ -1,23 +1,22 @@
 @use 'sass:math';
 
 .p-steps {
-
     .p-steps-item {
         .p-menuitem-link {
             background: transparent;
-            transition: $listItemTransition;
-            border-radius: $borderRadius;
             background: $stepsItemBg;
+            border-radius: $borderRadius;
+            transition: $listItemTransition;
 
             .p-steps-number {
-                color: $stepsItemNumberColor;
-                border: $stepsItemBorder;
-                background: $stepsItemBg;
+                z-index: 1;
                 min-width: $stepsItemNumberWidth;
                 height: $stepsItemNumberHeight;
-                line-height: $stepsItemNumberHeight;
                 font-size: $stepsItemNumberFontSize;
-                z-index: 1;
+                line-height: $stepsItemNumberHeight;
+                color: $stepsItemNumberColor;
+                background: $stepsItemBg;
+                border: $stepsItemBorder;
                 border-radius: $stepsItemNumberBorderRadius;
             }
 
@@ -27,14 +26,14 @@
             }
 
             &:not(.p-disabled):focus-visible {
-                @include focused();
+                @include focused;
             }
         }
 
         &.p-highlight {
             .p-steps-number {
-                background: $highlightBg;
                 color: $highlightTextColor;
+                background: $highlightBg;
             }
 
             .p-steps-title {
@@ -43,15 +42,15 @@
             }
         }
 
-        &:before {
-            content:' ';
-            border-top: $divider;
-            width: 100%;
+        &::before {
+            position: absolute;
             top: 50%;
             left: 0;
             display: block;
-            position: absolute;
+            width: 100%;
             margin-top: math.div(-1 * $stepsItemNumberHeight, 2);
+            content:' ';
+            border-top: $divider;
         }
     }
 }

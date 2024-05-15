@@ -4,9 +4,9 @@
 
 .p-component {
     font-family: var(--font-family);
-    font-feature-settings: var(--font-feature-settings, normal);
     font-size: $fontSize;
     font-weight: $fontWeight;
+    font-feature-settings: var(--font-feature-settings, normal);
 }
 
 .p-component-overlay {
@@ -37,12 +37,12 @@
 
 .p-link {
     font-family: var(--font-family);
-    font-feature-settings: var(--font-feature-settings, normal);
     font-size: $fontSize;
+    font-feature-settings: var(--font-feature-settings, normal);
     border-radius: $borderRadius;
 
     &:focus-visible {
-        @include focused();
+        @include focused;
     }
 }
 
@@ -59,6 +59,7 @@
         from {
             background-color: transparent;
         }
+
         to {
             background-color: var(--maskbg);
         }
@@ -68,6 +69,7 @@
         from {
             background-color: var(--maskbg);
         }
+
         to {
             background-color: transparent;
         }

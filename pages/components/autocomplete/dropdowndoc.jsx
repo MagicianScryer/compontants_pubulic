@@ -2,6 +2,7 @@ import { DocSectionCode } from "@pages/common/docsectioncode";
 import { DocSectionText } from "@pages/common/docsectiontext";
 import { AutoComplete } from "primereact/autocomplete";
 import { useState } from "react";
+import { getRelativePath } from "@utils/pathUtils";
 
 export const DropdownDoc = (props) => {
   const [value, setValue] = useState("");
@@ -78,7 +79,7 @@ export default function DropdownDemo() {
           dropdown
         />
       </div>
-      <DocSectionCode code={code} />
+      <DocSectionCode code={code} codeUrl={getRelativePath("pages", import.meta.url)} />
     </>
   );
 };

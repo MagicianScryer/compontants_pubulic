@@ -1,5 +1,5 @@
 @mixin icon-override($icon) {
-	&:before {
+	&::before {
 		content: $icon;
 	}
 }
@@ -17,7 +17,8 @@
 }
 
 @mixin focused-input() {
-	@include focused();
+	@include focused;
+
 	border-color: $inputFocusBorderColor;
 }
 
@@ -34,12 +35,12 @@
 @mixin menuitem-link {
 	> .p-menuitem-content {
 		color: $menuitemTextColor;
-		transition: $listItemTransition;
 		border-radius: $menuitemBorderRadius;
+		transition: $listItemTransition;
 
 		.p-menuitem-link {
-			color: $menuitemTextColor;
 			padding: $menuitemPadding;
+			color: $menuitemTextColor;
 			user-select: none;
 
 			.p-menuitem-text {
@@ -47,8 +48,8 @@
 			}
 
 			.p-menuitem-icon {
-				color: $menuitemIconColor;
 				margin-right: $inlineSpacing;
+				color: $menuitemIconColor;
 			}
 
 			.p-submenu-icon {
@@ -81,7 +82,7 @@
 		}
 	}
 
-	&:not(.p-highlight):not(.p-disabled) {
+	&:not(.p-highlight, .p-disabled) {
 		&.p-focus {
 			> .p-menuitem-content {
 				color: $menuitemTextFocusColor;
@@ -123,8 +124,8 @@
 @mixin horizontal-rootmenuitem-link {
 	> .p-menuitem-content {
 		color: $horizontalMenuRootMenuitemTextColor;
-		transition: $listItemTransition;
 		border-radius: $horizontalMenuRootMenuitemBorderRadius;
+		transition: $listItemTransition;
 
 		.p-menuitem-link {
 			padding: $horizontalMenuRootMenuitemPadding;
@@ -135,18 +136,18 @@
 			}
 
 			.p-menuitem-icon {
-				color: $horizontalMenuRootMenuitemIconColor;
 				margin-right: $inlineSpacing;
+				color: $horizontalMenuRootMenuitemIconColor;
 			}
 
 			.p-submenu-icon {
-				color: $horizontalMenuRootMenuitemIconColor;
 				margin-left: $inlineSpacing;
+				color: $horizontalMenuRootMenuitemIconColor;
 			}
 		}
 	}
 
-	&:not(.p-highlight):not(.p-disabled) {
+	&:not(.p-highlight, .p-disabled) {
 		> .p-menuitem-content {
 			&:hover {
 				color: $horizontalMenuRootMenuitemTextHoverColor;
@@ -168,16 +169,19 @@
 }
 
 @mixin placeholder {
-	::-webkit-input-placeholder {
+	::input-placeholder {
 		@content;
 	}
-	:-moz-placeholder {
+
+	:placeholder {
 		@content;
 	}
-	::-moz-placeholder {
+
+	::placeholder {
 		@content;
 	}
-	:-ms-input-placeholder {
+
+	:input-placeholder {
 		@content;
 	}
 }
@@ -208,30 +212,30 @@
 	width: $actionIconWidth;
 	height: $actionIconHeight;
 	color: $actionIconColor;
-	border: $actionIconBorder;
 	background: $actionIconBg;
+	border: $actionIconBorder;
 	border-radius: $actionIconBorderRadius;
 	transition: $actionIconTransition;
 
 	@if $enabled {
 		&:enabled:hover {
-			@include action-icon-hover();
+			@include action-icon-hover;
 		}
 	} @else {
 		&:hover {
-			@include action-icon-hover();
+			@include action-icon-hover;
 		}
 	}
 
 	&:focus-visible {
-		@include focused();
+		@include focused;
 	}
 }
 
 @mixin action-icon-hover() {
 	color: $actionIconHoverColor;
-	border-color: $actionIconHoverBorderColor;
 	background: $actionIconHoverBg;
+	border-color: $actionIconHoverBorderColor;
 }
 
 @function tint($color, $percentage) {

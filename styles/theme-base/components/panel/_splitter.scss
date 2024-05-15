@@ -1,16 +1,16 @@
 .p-splitter {
-    border: $panelContentBorder;
-    background: $panelContentBg;
-    border-radius: $borderRadius;
     color: $panelContentTextColor;
+    background: $panelContentBg;
+    border: $panelContentBorder;
+    border-radius: $borderRadius;
 
     .p-splitter-panel {
         flex-grow: 1;
     }
 
     .p-splitter-gutter {
-        transition: $actionIconTransition;
         background: $splitterGutterBg;
+        transition: $actionIconTransition;
 
         .p-splitter-gutter-handle {
             background: $splitterGutterHandleBg;

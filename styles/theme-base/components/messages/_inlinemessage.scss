@@ -4,10 +4,10 @@
     border-radius: $borderRadius;
 
     &.p-inline-message-info {
+        color: $infoMessageTextColor;
         background: $infoMessageBg;
         border: $infoMessageBorder;
         border-width: $inlineMessageBorderWidth;
-        color: $infoMessageTextColor;
 
         .p-inline-message-icon {
             color: $infoMessageIconColor;
@@ -15,10 +15,10 @@
     }
 
     &.p-inline-message-success {
+        color: $successMessageTextColor;
         background: $successMessageBg;
         border: $successMessageBorder;
         border-width: $inlineMessageBorderWidth;
-        color: $successMessageTextColor;
 
         .p-inline-message-icon {
             color: $successMessageIconColor;
@@ -26,10 +26,10 @@
     }
 
     &.p-inline-message-warn {
+        color: $warningMessageTextColor;
         background: $warningMessageBg;
         border: $warningMessageBorder;
         border-width: $inlineMessageBorderWidth;
-        color: $warningMessageTextColor;
 
         .p-inline-message-icon {
             color: $warningMessageIconColor;
@@ -37,10 +37,10 @@
     }
 
     &.p-inline-message-error {
+        color: $errorMessageTextColor;
         background: $errorMessageBg;
         border: $errorMessageBorder;
         border-width: $inlineMessageBorderWidth;
-        color: $errorMessageTextColor;
 
         .p-inline-message-icon {
             color: $errorMessageIconColor;
@@ -48,8 +48,8 @@
     }
 
     .p-inline-message-icon {
-        font-size: $inlineMessageIconFontSize;
         margin-right: $inlineSpacing;
+        font-size: $inlineMessageIconFontSize;
 
         &.p-icon {
             width: $inlineMessageIconFontSize;

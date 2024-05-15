@@ -2,14 +2,15 @@
   flex: 1 1 0;
   min-width: 0;
 }
+
 .doc-main {
   min-width: 0;
 
   .card {
+    margin-bottom: 1rem;
     background: var(--surface-card);
     border: var(--card-border);
     border-radius: 0;
-    margin-bottom: 1rem;
   }
 }
 
@@ -17,9 +18,9 @@
   margin-bottom: 1.5rem;
 
   p {
+    margin: 0;
     font-size: 1.125rem;
     color: var(--surface-900);
-    margin: 0;
   }
 }
 
@@ -29,13 +30,14 @@
   scroll-margin-top: 6.5rem;
 
   > a {
-    color: var(--primary-color);
-    opacity: 0.7;
-    margin-left: 1rem;
     display: none;
-    transition: all .2s;
+    margin-left: 1rem;
+    color: var(--primary-color);
     border-radius: var(--border-radius);
-    @include focus-visible();
+    opacity: 0.7;
+    transition: all .2s;
+
+    @include focus-visible;
   }
 
   &:hover {
@@ -55,21 +57,22 @@
     color: var(--surface-900);
 
     i {
-      border-radius: 6px;
       padding: 2px 6px;
       font-size: 1rem;
-      font-weight: 500;
       font-style: normal;
-      background-color: var(--doc-highlight-text-bg);
+      font-weight: 500;
       color: var(--doc-highlight-text-color);
+      background-color: var(--doc-highlight-text-bg);
+      border-radius: 6px;
     }
 
     a {
-      color: var(--primary-color);
       font-weight: 500;
-      transition: all .2s;
+      color: var(--primary-color);
       border-radius: var(--border-radius);
-      @include focus-visible();
+      transition: all .2s;
+
+      @include focus-visible;
 
       &:hover {
         text-decoration: underline;
@@ -78,12 +81,12 @@
   }
 
   .notification {
-    line-height: 1.5;
     padding: 1rem;
     font-weight: 500;
-    border-radius: 10px;
-    background-color: var(--doc-highlight-text-bg);
+    line-height: 1.5;
     color: var(--doc-highlight-text-color);
+    background-color: var(--doc-highlight-text-bg);
+    border-radius: 10px;
   }
 }
 
@@ -109,32 +112,32 @@
 
 .doc-section-code-buttons {
     position: absolute;
-    align-items: center;
-    justify-content: end;
-    z-index: 1;
     top: .75rem;
     right: .75rem;
-    gap: .5rem;
+    z-index: 1;
     display: none;
-    background: rgba(255,255,255,.05);
-    border-radius: 10px;
+    gap: .5rem;
+    align-items: center;
+    justify-content: end;
     padding: 2px;
+    background: rgb(255 255 255 / 5%);
     backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, .1);
+    border: 1px solid rgb(255 255 255 / 10%);
+    border-radius: 10px;
     
     button {
-        outline: 0 none;
-        border-radius: 8px;
-        outline-offset: 0;
-        background-color: transparent;
-        transition: background-color .2s, box-shadow .2s;
-        border: 0 none;
         color: var(--code-button-color);
         cursor: pointer;
+        background-color: transparent;
+        border: 0 none;
+        border-radius: 8px;
+        outline: 0 none;
+        outline-offset: 0;
+        transition: background-color .2s, box-shadow .2s;
 
         &:hover {
-            background-color: var(--code-button-hover-bg);
             color: var(--code-button-hover-color);
+            background-color: var(--code-button-hover-bg);
         }
 
         &.code-active {
@@ -153,16 +156,16 @@
 }
 
 .doc-table {
-    border-collapse: collapse;
     width: 100%;
     min-width: 960px;
     margin-bottom: 1.5rem;
+    border-collapse: collapse;
 
     th {
-        border-bottom: 1px solid var(--surface-border);
         padding: .75rem 1rem;
         text-align: left;
         text-transform: capitalize;
+        border-bottom: 1px solid var(--surface-border);
     }
 
     tbody {
@@ -172,21 +175,21 @@
 
         td {
             padding: .75rem 1rem;
-            border-bottom: 1px solid var(--surface-border);
-            white-space: pre-line;
             line-height: 1.5;
+            white-space: pre-line;
+            border-bottom: 1px solid var(--surface-border);
             scroll-margin-top: 6.5rem;
 
             &:first-child {
-                color: var(--primary-color);
-                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, Liberation Mono, monospace;
+                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
                 font-weight: 600;
+                color: var(--primary-color);
             }
 
             .doc-option-type {
-                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, Liberation Mono, monospace;
-                color: var(--primary-500);
+                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
                 font-weight: 500;
+                color: var(--primary-500);
 
                 .doc-option-type-options-container {
                     display: flex;
@@ -206,24 +209,24 @@
 
             .doc-option-name,
             > i:not(.pi) {
-                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, Liberation Mono, monospace;
                 position: relative;
-                scroll-margin-top: 6.5rem;
-                background-color: var(--doc-highlight-text-bg);
-                color: var(--doc-highlight-text-color);
-                border-radius: 6px;
                 padding: 2px 6px;
-                font-weight: 600;
+                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
                 font-style: normal;
+                font-weight: 600;
+                color: var(--doc-highlight-text-color);
                 white-space: nowrap;
+                background-color: var(--doc-highlight-text-bg);
+                border-radius: 6px;
+                scroll-margin-top: 6.5rem;
 
                 .doc-option-link {
                     position: absolute;
                     top: 0;
                     right: -1.5rem;
+                    display: none;
                     color: var(--primary-color);
                     opacity: 0.7;
-                    display: none;
                     transition: opacity 0.3s, colors 0.3s;
                 }
             }
@@ -242,29 +245,29 @@
 
             .doc-option-default,
             .doc-option-returnType {
-                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, Liberation Mono, monospace;
-                font-weight: 400;
-                font-style: normal;
                 display: flex;
-                border-width: 1px;
-                border-style: solid;
-                border-radius: 6px;
-                padding: 2px 6px;
                 max-width: min-content;
+                padding: 2px 6px;
+                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+                font-style: normal;
+                font-weight: 400;
+                border-style: solid;
+                border-width: 1px;
+                border-radius: 6px;
             }
 
             .doc-option-parameter-name {
-                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, Liberation Mono, monospace;
+                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
                 color: var(--primary-700);
             }
 
             .doc-option-parameter-type {
-                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, Liberation Mono, monospace;
+                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
                 color: var(--primary-500);
             }
 
             .doc-option-params {
-                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, Liberation Mono, monospace;
+                font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
             }
 
             .doc-option-light {

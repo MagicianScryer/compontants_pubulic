@@ -1,13 +1,13 @@
 .p-organizationchart {
     .p-organizationchart-node-content {
         &.p-organizationchart-selectable-node:not(.p-highlight):hover {
-            background: $inputListItemHoverBg;
             color: $inputListItemTextHoverColor;
+            background: $inputListItemHoverBg;
         }
 
         &.p-highlight {
-            background: $highlightBg;
             color: $highlightTextColor;
+            background: $highlightBg;
 
             .p-node-toggler {
                 i {
@@ -22,29 +22,29 @@
     }
 
     .p-organizationchart-line-left {
-        border-right: $panelContentBorder;
         border-color: $organizationChartConnectorColor;
+        border-right: $panelContentBorder;
     }
 
     .p-organizationchart-line-top {
-        border-top: $panelContentBorder;
         border-color: $organizationChartConnectorColor;
+        border-top: $panelContentBorder;
     }
 
     .p-organizationchart-node-content {
-        border: $panelContentBorder;
-        background: $panelContentBg;
-        color: $panelContentTextColor;
         padding: $panelContentPadding;
+        color: $panelContentTextColor;
+        background: $panelContentBg;
+        border: $panelContentBorder;
     }
 
     .p-organizationchart-node-content .p-node-toggler {
-        background: inherit;
         color: inherit;
+        background: inherit;
         border-radius: 50%;
 
         &:focus-visible {
-            @include focused();
+            @include focused;
         }
     }
 }

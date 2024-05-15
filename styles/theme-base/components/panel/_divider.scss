@@ -4,10 +4,10 @@
     }
 
     &.p-divider-horizontal {
-        margin: $dividerHorizontalMargin;
         padding: $dividerHorizontalPadding;
+        margin: $dividerHorizontalMargin;
 
-        &:before {
+        &::before {
             border-top: $dividerSize $dividerColor;
         }
 
@@ -17,10 +17,10 @@
     }
 
     &.p-divider-vertical {
-        margin: $dividerVerticalMargin;
         padding: $dividerVerticalPadding;
+        margin: $dividerVerticalMargin;
 
-        &:before {
+        &::before {
             border-left: $dividerSize $dividerColor;
         }
 

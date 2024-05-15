@@ -1,23 +1,24 @@
 .p-dialog {
+    border: $overlayContentBorder;
     border-radius: $borderRadius;
     box-shadow: $overlayContainerShadow;
-    border: $overlayContentBorder;
 
     .p-dialog-header {
-        border-bottom: $dialogHeaderBorder;
-        background: $dialogHeaderBg;
-        color: $dialogHeaderTextColor;
         padding: $dialogHeaderPadding;
-        border-top-right-radius: $borderRadius;
+        color: $dialogHeaderTextColor;
+        background: $dialogHeaderBg;
+        border-bottom: $dialogHeaderBorder;
         border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
 
         .p-dialog-title {
-            font-weight: $dialogHeaderFontWeight;
             font-size: $dialogHeaderFontSize;
+            font-weight: $dialogHeaderFontWeight;
         }
 
         .p-dialog-header-icon {
-            @include action-icon();
+            @include action-icon;
+
             margin-right: $inlineSpacing;
             
             &:last-child {
@@ -27,9 +28,9 @@
     }
 
     .p-dialog-content {
-        background: $overlayContentBg;
-        color: $panelContentTextColor;
         padding: $dialogContentPadding;
+        color: $panelContentTextColor;
+        background: $overlayContentBg;
 
         &:last-of-type {
             border-bottom-right-radius: $borderRadius;
@@ -38,17 +39,17 @@
     }
 
     .p-dialog-footer {
-        border-top:  $dialogFooterBorder;
-        background: $overlayContentBg;
-        color: $panelFooterTextColor;
         padding: $dialogFooterPadding;
+        color: $panelFooterTextColor;
         text-align: right;
+        background: $overlayContentBg;
+        border-top:  $dialogFooterBorder;
         border-bottom-right-radius: $borderRadius;
         border-bottom-left-radius: $borderRadius;
 
         button {
-            margin: 0 $inlineSpacing 0 0;
             width: auto;
+            margin: 0 $inlineSpacing 0 0;
         }
     }
 

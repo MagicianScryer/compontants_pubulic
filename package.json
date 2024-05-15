@@ -22,6 +22,7 @@
   "scripts": {
     "dev": "webpack serve --config webpack.dev.js",
     "prod": "webpack --config webpack.prod.js",
+    "lint:style": "stylelint --fix ./**/*.{css,scss,html}",
     "build-lib": "NODE_ENV=production INPUT_DIR=components/lib/ STYLE_INPUT_DIR=styles/ OUTPUT_DIR=dist/ npm run build-package",
     "build-package": "rollup --config rollup.config.js && gulp build-ruibaireact"
   },
@@ -69,6 +70,9 @@
     "sass": "^1.64.1",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
+    "stylelint": "^16.5.0",
+    "stylelint-config-recess-order": "^5.0.1",
+    "stylelint-config-standard-scss": "^13.1.0",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"

@@ -3,43 +3,43 @@
     height: $radiobuttonHeight;
 
     .p-radiobutton-box {
-        border: $radiobuttonBorder;
-        background: $inputBg;
         width: $radiobuttonWidth;
         height: $radiobuttonHeight;
         color: $textColor;
+        background: $inputBg;
+        border: $radiobuttonBorder;
         border-radius: 50%;
         transition: $formElementTransition;
 
-        &:not(.p-disabled):not(.p-highlight):hover {
+        &:not(.p-disabled, .p-highlight):hover {
             border-color: $inputHoverBorderColor;
         }
 
         &:not(.p-disabled).p-focus {
-            @include focused-input();
+            @include focused-input;
         }
 
         .p-radiobutton-icon {
             width: $radiobuttonIconSize;
             height: $radiobuttonIconSize;
-            transition-duration: $transitionDuration;
             background-color: $radiobuttonIconActiveColor;
+            transition-duration: $transitionDuration;
         }
 
         &.p-highlight {
-            border-color: $radiobuttonActiveBorderColor;
             background: $radiobuttonActiveBg;
+            border-color: $radiobuttonActiveBorderColor;
 
             &:not(.p-disabled):hover {
-                border-color: $radiobuttonActiveHoverBorderColor;
-                background: $radiobuttonActiveHoverBg;
                 color: $radiobuttonIconActiveHoverColor;
+                background: $radiobuttonActiveHoverBg;
+                border-color: $radiobuttonActiveHoverBorderColor;
             }
         }
     }
 
     &.p-invalid > .p-radiobutton-box {
-        @include invalid-input();
+        @include invalid-input;
     }
 
     &:focus {
@@ -67,7 +67,7 @@
     }
 }
 
-@if ($highlightBg == $radiobuttonActiveBg) {
+@if $highlightBg == $radiobuttonActiveBg {
     .p-highlight {
         .p-radiobutton {
             .p-radiobutton-box {

@@ -23,12 +23,12 @@
 .p-speeddial-action {
 	width: $speedDialActionWidth;
 	height: $speedDialActionHeight;
-	background: $speedDialActionBg;
 	color: $speedDialActionTextColor;
+	background: $speedDialActionBg;
 
 	&:hover {
-		background: $speedDialActionHoverBg;
 		color: $speedDialActionTextHoverColor;
+		background: $speedDialActionHoverBg;
 	}
 }
 

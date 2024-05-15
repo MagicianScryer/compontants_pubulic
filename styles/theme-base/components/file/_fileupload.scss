@@ -1,13 +1,13 @@
 .p-fileupload {
     .p-fileupload-buttonbar {
-        background: $panelHeaderBg;
-        padding: $panelHeaderPadding;
-        border: $panelHeaderBorder;
-        color: $panelHeaderTextColor;
-        border-bottom: 0 none;
-        border-top-right-radius: $borderRadius;
-        border-top-left-radius: $borderRadius;
         gap: $inlineSpacing;
+        padding: $panelHeaderPadding;
+        color: $panelHeaderTextColor;
+        background: $panelHeaderBg;
+        border: $panelHeaderBorder;
+        border-bottom: 0 none;
+        border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
         
         .p-button {
             margin-right: $inlineSpacing;
@@ -15,10 +15,10 @@
     }
 
     .p-fileupload-content {
-        background: $panelContentBg;
         padding: $fileUploadContentPadding;
-        border: $panelContentBorder;
         color: $panelContentTextColor;
+        background: $panelContentBg;
+        border: $panelContentBorder;
         border-bottom-right-radius: $borderRadius;
         border-bottom-left-radius: $borderRadius;
     }

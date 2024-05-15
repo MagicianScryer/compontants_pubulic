@@ -10,63 +10,63 @@
     }
 
     .p-datatable-header {
-        background: $tableHeaderBg;
-        color: $tableHeaderTextColor;
-        border: $tableHeaderBorder;
-        border-width: $tableHeaderBorderWidth;
         padding: $tableHeaderPadding;
         font-weight: $tableHeaderFontWeight;
+        color: $tableHeaderTextColor;
+        background: $tableHeaderBg;
+        border: $tableHeaderBorder;
+        border-width: $tableHeaderBorderWidth;
     }
 
     .p-datatable-footer {
-        background: $tableFooterBg;
-        color: $tableFooterTextColor;
-        border: $tableFooterBorder;
-        border-width: $tableFooterBorderWidth;
         padding: $tableFooterPadding;
         font-weight: $tableFooterFontWeight;
+        color: $tableFooterTextColor;
+        background: $tableFooterBg;
+        border: $tableFooterBorder;
+        border-width: $tableFooterBorderWidth;
     }
 
     .p-datatable-thead > tr > th {
-        text-align: $tableCellContentAlignment;
         padding: $tableHeaderCellPadding;
-        border: $tableHeaderCellBorder;
-        border-width: $tableHeaderCellBorderWidth;
         font-weight: $tableHeaderCellFontWeight;
         color: $tableHeaderCellTextColor;
+        text-align: $tableCellContentAlignment;
         background: $tableHeaderCellBg;
+        border: $tableHeaderCellBorder;
+        border-width: $tableHeaderCellBorderWidth;
         transition: $listItemTransition;
     }
 
     .p-datatable-tfoot > tr > td {
-        text-align: $tableCellContentAlignment;
         padding: $tableFooterCellPadding;
-        border: $tableFooterCellBorder;
-        border-width: $tableFooterCellBorderWidth;
         font-weight: $tableFooterCellFontWeight;
         color: $tableFooterCellTextColor;
+        text-align: $tableCellContentAlignment;
         background: $tableFooterCellBg;
+        border: $tableFooterCellBorder;
+        border-width: $tableFooterCellBorderWidth;
     }
 
     .p-sortable-column {
         .p-sortable-column-icon {
-            color: $tableHeaderCellIconColor;
             margin-left: $inlineSpacing;
+            color: $tableHeaderCellIconColor;
         }
 
         .p-sortable-column-badge {
-            border-radius: 50%;
-            height: $tableSortableColumnBadgeSize;
             min-width: $tableSortableColumnBadgeSize;
+            height: $tableSortableColumnBadgeSize;
+            margin-left: $inlineSpacing;
             line-height: $tableSortableColumnBadgeSize;
             color: $highlightTextColor;
             background: $highlightBg;
-            margin-left: $inlineSpacing;
+            border-radius: 50%;
         }
 
-        &:not(.p-highlight):not(.p-sortable-disabled):hover {
-            background: $tableHeaderCellHoverBg;
+        &:not(.p-highlight, .p-sortable-disabled):hover {
             color: $tableHeaderCellTextHoverColor;
+            background: $tableHeaderCellHoverBg;
 
             .p-sortable-column-icon {
                 color: $tableHeaderCellIconHoverColor;
@@ -74,16 +74,16 @@
         }
 
         &.p-highlight {
-            background: $tableHeaderCellHighlightBg;
             color: $tableHeaderCellHighlightTextColor;
+            background: $tableHeaderCellHighlightBg;
 
             .p-sortable-column-icon {
                 color: $tableHeaderCellHighlightTextColor;
             }
 
             &:not(.p-sortable-disabled):hover {
-                background: $tableHeaderCellHighlightHoverBg;
                 color: $tableHeaderCellHighlightTextColor;
+                background: $tableHeaderCellHighlightHoverBg;
     
                 .p-sortable-column-icon {
                     color: $tableHeaderCellHighlightTextColor;
@@ -92,28 +92,28 @@
         }
 
         &:focus-visible {
-            box-shadow: $inputListItemFocusShadow;
             outline: 0 none;
+            box-shadow: $inputListItemFocusShadow;
         }
     }
 
     .p-datatable-tbody {
         > tr {
-            background: $tableBodyRowBg;
             color: $tableBodyRowTextColor;
+            background: $tableBodyRowBg;
             transition: $listItemTransition;
 
             > td {
+                padding: $tableBodyCellPadding;
                 text-align: $tableCellContentAlignment;
                 border: $tableBodyCellBorder;
                 border-width: $tableBodyCellBorderWidth;
-                padding: $tableBodyCellPadding;
 
                 .p-row-toggler,
                 .p-row-editor-init,
                 .p-row-editor-save,
                 .p-row-editor-cancel {
-                    @include action-icon();
+                    @include action-icon;
                 }
 
                 .p-row-editor-save {
@@ -125,14 +125,14 @@
                 }
 
                 &.p-highlight {
-                    background: $highlightBg;
                     color: $highlightTextColor;
+                    background: $highlightBg;
                 }
             }
 
             &.p-highlight {
-                background: $highlightBg;
                 color: $highlightTextColor;
+                background: $highlightBg;
             }
 
             &.p-highlight-contextmenu {
@@ -152,9 +152,9 @@
 
     &.p-datatable-selectable {
         .p-datatable-tbody > tr.p-selectable-row {
-            &:not(.p-highlight):not(.p-datatable-emptymessage):hover {
-                background: $tableBodyRowHoverBg;
+            &:not(.p-highlight, .p-datatable-emptymessage):hover {
                 color: $tableBodyRowTextHoverColor;
+                background: $tableBodyRowHoverBg;
             }
 
             &:focus-visible {
@@ -168,8 +168,8 @@
         .p-datatable-tbody > tr.p-selectable-row {
             & > td.p-selectable-cell {
                 &:not(.p-highlight):hover {
-                    background: $tableBodyRowHoverBg;
                     color: $tableBodyRowTextHoverColor;
+                    background: $tableBodyRowHoverBg;
                 }
 
                 &:focus-visible {
@@ -181,9 +181,9 @@
     }
 
     &.p-datatable-hoverable-rows {
-        .p-datatable-tbody > tr:not(.p-highlight):not(.p-datatable-emptymessage):hover {
-            background: $tableBodyRowHoverBg;
+        .p-datatable-tbody > tr:not(.p-highlight, .p-datatable-emptymessage):hover {
             color: $tableBodyRowTextHoverColor;
+            background: $tableBodyRowHoverBg;
         }
     }
 
@@ -206,6 +206,7 @@
 
     .p-datatable-loading-icon {
         font-size: $loadingIconFontSize;
+
         &.p-icon {
             width: $loadingIconFontSize;
             height: $loadingIconFontSize;
@@ -214,19 +215,19 @@
 
     &.p-datatable-gridlines {
         .p-datatable-header {
-            border-width: 1px 1px 0 1px;
+            border-width: 1px 1px 0;
         }
 
         .p-datatable-footer {
-            border-width: 0 1px 1px 1px;
+            border-width: 0 1px 1px;
         }
 
         .p-paginator-top {
-            border-width: 0 1px 0 1px;
+            border-width: 0 1px;
         }
 
         .p-paginator-bottom {
-            border-width: 0 1px 1px 1px;
+            border-width: 0 1px 1px;
         }
 
         .p-datatable-thead {
@@ -247,7 +248,7 @@
                     border-width: 1px 0 0 1px;
 
                     &:last-child {
-                        border-width: 1px 1px 0 1px;
+                        border-width: 1px 1px 0;
                     }
                 }
 
@@ -269,7 +270,7 @@
                     border-width: 1px 0 1px 1px;
 
                     &:last-child {
-                        border-width: 1px 1px 1px 1px;
+                        border-width: 1px;
                     }
                 }
             }
@@ -281,7 +282,7 @@
                     border-width: 0 0 1px 1px;
 
                     &:last-child {
-                        border-width: 0 1px 1px 1px;
+                        border-width: 0 1px 1px;
                     }
                 }
             }
@@ -293,7 +294,7 @@
                     border-width: 0 0 1px 1px;
 
                     &:last-child {
-                        border-width: 0 1px 1px 1px;
+                        border-width: 0 1px 1px;
                     }
                 }
             }
@@ -306,7 +307,7 @@
                         border-width: 0 0 0 1px;
 
                         &:last-child {
-                            border-width: 0 1px 0 1px;
+                            border-width: 0 1px;
                         }
                     }
                 }
@@ -320,8 +321,8 @@
                 background: $tableBodyRowEvenBg;
     
                 &.p-highlight {
-                    background: $highlightBg;
                     color: $highlightTextColor;
+                    background: $highlightBg;
     
                     .p-row-toggler {
                         color: $highlightTextColor;

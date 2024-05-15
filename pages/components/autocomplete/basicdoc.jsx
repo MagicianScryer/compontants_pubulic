@@ -1,6 +1,7 @@
 import { DocSectionCode } from "@pages/common/docsectioncode";
 import { DocSectionText } from "@pages/common/docsectiontext";
 import { AutoComplete } from "primereact/autocomplete";
+import { getRelativePath } from "@utils/pathUtils";
 import { useState } from "react";
 
 export const BasicDoc = (props) => {
@@ -66,7 +67,7 @@ export default function BasicDemo() {
       <div className="card flex justify-content-center align-items-center">
         <AutoComplete value={value} suggestions={items} completeMethod={search} onChange={(e) => setValue(e.value)} />
       </div>
-      <DocSectionCode code={code} />
+      <DocSectionCode code={code} codeUrl={getRelativePath("pages", import.meta.url)} />
     </>
   );
 };

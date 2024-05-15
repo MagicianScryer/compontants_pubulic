@@ -1,13 +1,13 @@
 .p-menu {
+	width: $menuWidth;
 	padding: $verticalMenuPadding;
-	background: $menuBg;
 	color: $menuTextColor;
+	background: $menuBg;
 	border: $menuBorder;
 	border-radius: $borderRadius;
-	width: $menuWidth;
 
 	.p-menuitem {
-		@include menuitem-link();
+		@include menuitem-link;
 	}
 
 	&.p-menu-overlay {
@@ -17,17 +17,17 @@
 	}
 
 	.p-submenu-header {
-		margin: $submenuHeaderMargin;
 		padding: $submenuHeaderPadding;
+		margin: $submenuHeaderMargin;
+		font-weight: $submenuHeaderFontWeight;
 		color: $submenuHeaderTextColor;
 		background: $submenuHeaderBg;
-		font-weight: $submenuHeaderFontWeight;
-		border-top-right-radius: $submenuHeaderBorderRadius;
 		border-top-left-radius: $submenuHeaderBorderRadius;
+		border-top-right-radius: $submenuHeaderBorderRadius;
 	}
 
 	.p-menu-separator {
-		border-top: $divider;
 		margin: $menuSeparatorMargin;
+		border-top: $divider;
 	}
 }

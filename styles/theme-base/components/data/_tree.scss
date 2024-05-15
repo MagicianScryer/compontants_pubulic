@@ -1,8 +1,8 @@
 .p-tree {
-    border: $panelContentBorder;
-    background: $panelContentBg;
-    color: $panelContentTextColor;
     padding: $panelContentPadding;
+    color: $panelContentTextColor;
+    background: $panelContentBg;
+    border: $panelContentBorder;
     border-radius: $borderRadius;
 
     .p-tree-container {
@@ -10,13 +10,14 @@
             padding: $treeNodePadding;
 
             .p-treenode-content {
+                padding: $treeNodeContentPadding;
                 border-radius: $borderRadius;
                 transition: $listItemTransition;
-                padding: $treeNodeContentPadding;
 
                 .p-tree-toggler {
                     margin-right: $inlineSpacing;
-                    @include action-icon();
+
+                    @include action-icon;
                 }
 
                 .p-treenode-icon {
@@ -35,12 +36,12 @@
                 }
 
                 &:focus {
-                    @include focused-listitem();
+                    @include focused-listitem;
                 }
 
                 &.p-highlight {
-                    background: $highlightBg;
                     color: $highlightTextColor;
+                    background: $highlightBg;
 
                     .p-tree-toggler,
                     .p-treenode-icon {
@@ -53,13 +54,13 @@
                 }
 
                 &.p-treenode-selectable:not(.p-highlight):hover {
-                    background: $inputListItemHoverBg;
                     color: $inputListItemTextHoverColor;
+                    background: $inputListItemHoverBg;
                 }
 
                 &.p-treenode-dragover {
-                    background: $inputListItemHoverBg;
                     color: $inputListItemTextHoverColor;
+                    background: $inputListItemHoverBg;
                 }
             }
         }

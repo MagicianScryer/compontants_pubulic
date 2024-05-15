@@ -5,12 +5,12 @@
         transition: $formElementTransition;
 
         &:not(.p-disabled):hover {
-            background: $inplaceHoverBg;
             color: $inplaceTextHoverColor;
+            background: $inplaceHoverBg;
         }
 
         &:focus {
-            @include focused();
+            @include focused;
         }
     }
 }

@@ -4,10 +4,10 @@
     gap: $inlineSpacing;
 
     .p-rating-item {
-        .p-rating-icon {
-            color: $ratingStarIconOffColor;
-            transition: $formElementTransition;   
+        .p-rating-icon {   
             font-size: $ratingIconFontSize;
+            color: $ratingStarIconOffColor;
+            transition: $formElementTransition;
             
             &.p-icon {
                 width: $ratingIconFontSize;
@@ -20,7 +20,7 @@
         }
 
         &:focus {
-            @include focused();
+            @include focused;
         }
 
         &.p-rating-item-active {
@@ -30,7 +30,7 @@
         }
     }
 
-    &:not(.p-disabled):not(.p-readonly) {
+    &:not(.p-disabled, .p-readonly) {
         .p-rating-item {
             &:hover {
                 .p-rating-icon {
@@ -45,7 +45,7 @@
     }
 }
 
-@if ($highlightBg == $ratingStarIconOnColor) {
+@if $highlightBg == $ratingStarIconOnColor {
     .p-highlight {
         .p-rating {
             .p-rating-item {

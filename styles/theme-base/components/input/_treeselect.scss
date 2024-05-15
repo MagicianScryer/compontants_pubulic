@@ -3,15 +3,15 @@
 .p-treeselect {
     background: $inputBg;
     border: $inputBorder;
-    transition: $formElementTransition;
     border-radius: $borderRadius;
+    transition: $formElementTransition;
 
     &:not(.p-disabled):hover {
         border-color: $inputHoverBorderColor;
     }
 
     &:not(.p-disabled).p-focus {
-        @include focused-input();
+        @include focused-input;
     }
 
     &.p-treeselect-clearable {
@@ -33,27 +33,27 @@
         .p-treeselect-token {
             padding: math.div(nth($inputPadding, 1), 2) nth($inputPadding, 2);
             margin-right: $inlineSpacing;
-            background: $chipBg;
             color: $chipTextColor;
+            background: $chipBg;
             border-radius: $chipBorderRadius;
         }
     }
 
     .p-treeselect-trigger {
-        background: transparent;
-        color: $inputIconColor;
         width: $inputGroupAddOnMinWidth;
+        color: $inputIconColor;
+        background: transparent;
         border-top-right-radius: $borderRadius;
         border-bottom-right-radius: $borderRadius;
     }
 
     .p-treeselect-clear-icon {
-        color: $inputIconColor;
         right: $inputGroupAddOnMinWidth;
+        color: $inputIconColor;
     }
     
     &.p-invalid.p-component {
-        @include invalid-input();
+        @include invalid-input;
     }
 }
 
@@ -68,20 +68,20 @@
 }
 
 .p-treeselect-panel {
-    background: $inputOverlayBg;
     color: $inputListTextColor;
+    background: $inputOverlayBg;
     border: $inputOverlayBorder;
     border-radius: $borderRadius;
     box-shadow: $inputOverlayShadow;
 
     .p-treeselect-header {
         padding: $inputListHeaderPadding;
-        border-bottom: $inputListHeaderBorder;
+        margin: $inputListHeaderMargin;
         color: $inputListHeaderTextColor;
         background: $inputOverlayHeaderBg;
-        margin: $inputListHeaderMargin;
-        border-top-right-radius: $borderRadius;
+        border-bottom: $inputListHeaderBorder;
         border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
 
         .p-treeselect-filter-container {
             margin-right: $inlineSpacing;
@@ -107,7 +107,7 @@
         }
 
         .p-treeselect-close {
-            @include action-icon();
+            @include action-icon;
         }
     }
 

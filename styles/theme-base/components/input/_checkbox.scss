@@ -3,18 +3,18 @@
     height: $checkboxHeight;
 
     .p-checkbox-box {
-        border: $checkboxBorder;
-        background: $inputBg;
         width: $checkboxWidth;
         height: $checkboxHeight;
         color: $textColor;
+        background: $inputBg;
+        border: $checkboxBorder;
         border-radius: $borderRadius;
         transition: $formElementTransition;
 
         .p-checkbox-icon {
-            transition-duration: $transitionDuration;
-            color: $checkboxIconActiveColor;
             font-size: $checkboxIconFontSize;
+            color: $checkboxIconActiveColor;
+            transition-duration: $transitionDuration;
 
             &.p-icon {
                 width: $checkboxIconFontSize;
@@ -23,13 +23,13 @@
         }
 
         &.p-highlight {
-            border-color: $checkboxActiveBorderColor;
             background: $checkboxActiveBg;
+            border-color: $checkboxActiveBorderColor;
 
             &:not(.p-disabled):hover {
-                border-color: $checkboxActiveHoverBorderColor;
-                background: $checkboxActiveHoverBg;
                 color: $checkboxIconActiveHoverColor;
+                background: $checkboxActiveHoverBg;
+                border-color: $checkboxActiveHoverBorderColor;
             }
         }
     }
@@ -41,19 +41,19 @@
             }
 
             &.p-focus {
-                @include focused-input();
+                @include focused-input;
             }
 
-            &.p-highlight:hover {    
-                border-color: $checkboxActiveHoverBorderColor;
-                background: $checkboxActiveHoverBg;
+            &.p-highlight:hover {
                 color: $checkboxIconActiveHoverColor;
+                background: $checkboxActiveHoverBg;    
+                border-color: $checkboxActiveHoverBorderColor;
             }
         }
     }
 
     &.p-invalid > .p-checkbox-box {
-        @include invalid-input();
+        @include invalid-input;
     }
 }
 
@@ -81,7 +81,7 @@
     }
 }
 
-@if ($highlightBg == $checkboxActiveBg) {
+@if $highlightBg == $checkboxActiveBg {
     .p-highlight {
         .p-checkbox {
             .p-checkbox-box {

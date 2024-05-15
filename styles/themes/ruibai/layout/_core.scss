@@ -3,13 +3,12 @@ html {
 }
 
 body {
-    margin: 0px;
     min-height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background-color: var(--surface-ground);
+    margin: 0;
+    overflow: hidden auto;
     font-weight: $fontWeight;
     color: var(--text-color);
+    background-color: var(--surface-ground);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -23,12 +22,12 @@ a {
 }
 
 ::selection {
-    background-color: var(--highlight-bg);
     color: var(--highlight-text-color);
+    background-color: var(--highlight-bg);
 } 
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 1.5rem 0 1rem 0;
+    margin: 1.5rem 0 1rem;
     font-family: var(--font-family);
     font-weight: 600;
     line-height: 1.2;
@@ -64,17 +63,17 @@ h6 {
 }
 
 p {
+    margin: 0 0 1rem;
     line-height: 1.75;
-    margin: 0 0 1rem 0;
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+    appearance: textfield;
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
-        -webkit-appearance: none;
         margin: 0;
+        appearance: none;
     }
 }
 
@@ -84,17 +83,17 @@ input[type="number"] {
 }
 
 .px-link {
-    font-size: $fontSize;
-    border-radius: var(--border-radius);
-    text-align: left;
-	background-color: transparent;
-	margin: 0;
 	padding: 0;
-	border: none;
+	margin: 0;
+    font-size: $fontSize;
+    text-align: left;
     cursor: pointer;
     user-select: none;
+	background-color: transparent;
+	border: none;
+    border-radius: var(--border-radius);
 
-    @include focus-visible();
+    @include focus-visible;
 }
 
 .px-link:disabled {

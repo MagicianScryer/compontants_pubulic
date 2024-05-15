@@ -20,6 +20,11 @@ export const DocSectionCode = (props) => {
     await navigator.clipboard.writeText(props.code[codeLang]);
   };
 
+  const toUrl = (url) => {
+    // 开启新窗口
+    window.open(url);
+  };
+
   return (
     <div className="doc-section-code">
       <div className="doc-section-code-buttons scalein animation-duration-300">
@@ -42,6 +47,17 @@ export const DocSectionCode = (props) => {
           tooltipOptions={{ position: "bottom", className: "doc-section-code-tooltip" }}
         >
           <i className="pi pi-copy"></i>
+        </Button>
+        <Button
+          type="button"
+          onClick={() => {
+            toUrl("https://stackblitz.com/~/github.com/MagicianScryer/compontants_pubulic" + "?file=" + props.codeUrl);
+          }}
+          className="h-2rem w-2rem p-0 inline-flex align-items-center justify-content-center shadow-none"
+          tooltip="及时调试"
+          tooltipOptions={{ position: "bottom", className: "doc-section-code-tooltip" }}
+        >
+          <i className="pi pi-bolt"></i>
         </Button>
       </div>
 

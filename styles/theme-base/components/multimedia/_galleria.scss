@@ -1,12 +1,12 @@
 .p-galleria {
     .p-galleria-close {
-        margin: $galleriaCloseIconMargin;
-        background: $galleriaCloseIconBg;
-        color: $galleriaCloseIconColor;
         width: $galleriaCloseIconWidth;
         height: $galleriaCloseIconHeight;
-        transition: $actionIconTransition;
+        margin: $galleriaCloseIconMargin;
+        color: $galleriaCloseIconColor;
+        background: $galleriaCloseIconBg;
         border-radius: $galleriaCloseIconBorderRadius;
+        transition: $actionIconTransition;
 
         .p-galleria-close-icon {
             font-size: $galleriaCloseIconFontSize;
@@ -18,19 +18,19 @@
         }
 
         &:hover {
-            background: $galleriaCloseIconHoverBg;
             color: $galleriaCloseIconHoverColor;
+            background: $galleriaCloseIconHoverBg;
         }
     }
 
     .p-galleria-item-nav {
-        background: $galleriaItemNavigatorBg;
-        color: $galleriaItemNavigatorColor;
         width: $galleriaItemNavigatorWidth;
         height: $galleriaItemNavigatorHeight;
-        transition: $actionIconTransition;
-        border-radius: $galleriaItemNavigatorBorderRadius;
         margin: $galleriaItemNavigatorMargin;
+        color: $galleriaItemNavigatorColor;
+        background: $galleriaItemNavigatorBg;
+        border-radius: $galleriaItemNavigatorBorderRadius;
+        transition: $actionIconTransition;
 
         .p-galleria-item-prev-icon,
         .p-galleria-item-next-icon {
@@ -44,16 +44,16 @@
 
         &:not(.p-disabled) {
             &:hover {
-                background: $galleriaItemNavigatorHoverBg;
                 color: $galleriaItemNavigatorHoverColor;
+                background: $galleriaItemNavigatorHoverBg;
             }
         }
     }
 
     .p-galleria-caption {
-        background: $galleriaCaptionBg;
-        color: $galleriaCaptionTextColor;
         padding: $galleriaCaptionPadding;
+        color: $galleriaCaptionTextColor;
+        background: $galleriaCaptionBg;
     }
 
     .p-galleria-indicators {
@@ -61,11 +61,11 @@
 
         .p-galleria-indicator {
             button {
-                background-color: $galleriaIndicatorBg;
                 width: $galleriaIndicatorWidth;
                 height: $galleriaIndicatorHeight;
-                transition: $actionIconTransition;
+                background-color: $galleriaIndicatorBg;
                 border-radius: $galleriaIndicatorBorderRadius;
+                transition: $actionIconTransition;
 
                 &:hover {
                     background: $galleriaIndicatorHoverBg;
@@ -74,8 +74,8 @@
 
             &.p-highlight {
                 button {
-                    background: $highlightBg;
                     color: $highlightTextColor;
+                    background: $highlightBg;
                 }
             }
         }
@@ -110,8 +110,8 @@
 
                 &.p-highlight {
                     button {
-                        background: $highlightBg;
                         color: $highlightTextColor;
+                        background: $highlightBg;
                     }
                 }
             }
@@ -119,22 +119,22 @@
     }
 
     .p-galleria-thumbnail-container {
-        background: $galleriaThumbnailContainerBg;
         padding: $galleriaThumbnailContainerPadding;
+        background: $galleriaThumbnailContainerBg;
 
         .p-galleria-thumbnail-prev,
         .p-galleria-thumbnail-next {
-            margin: $inlineSpacing;
-            background-color: $galleriaThumbnailNavigatorBg;
-            color: $galleriaThumbnailNavigatorColor;
             width: $galleriaThumbnailNavigatorWidth;
             height: $galleriaThumbnailNavigatorHeight;
-            transition: $actionIconTransition;
+            margin: $inlineSpacing;
+            color: $galleriaThumbnailNavigatorColor;
+            background-color: $galleriaThumbnailNavigatorBg;
             border-radius: $galleriaThumbnailNavigatorBorderRadius;
+            transition: $actionIconTransition;
 
             &:hover {
-                background: $galleriaThumbnailNavigatorHoverBg;
                 color: $galleriaThumbnailNavigatorHoverColor;
+                background: $galleriaThumbnailNavigatorHoverBg;
             }
         }
 
@@ -142,7 +142,7 @@
             transition: $listItemTransition;
             
             &:focus-visible {
-                @include focused();
+                @include focused;
             }
         }
     }

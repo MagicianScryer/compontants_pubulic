@@ -2,24 +2,24 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% - var(--scrollbar-width, 0px));
     z-index: 1100;
-    transition: background-color .5s, border-color .5s;
+    width: calc(100% - var(--scrollbar-width, 0px));
     border-bottom: 1px solid transparent;
+    transition: background-color .5s, border-color .5s;
 
     &.layout-topbar-sticky {
-        border-bottom: 1px solid var(--surface-border);
         background-color: var(--topbar-sticky-bg);
         backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--surface-border);
     }
 }
 
 .layout-topbar-inner {
-    height: 4rem;
-    padding: 0 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 4rem;
+    padding: 0 4rem;
 
     .layout-topbar-logo-container {
         width: 250px;
@@ -29,7 +29,8 @@
     .layout-topbar-logo,
     .layout-topbar-icon {
         border-radius: var(--border-radius);
-        @include focus-visible();
+
+        @include focus-visible;
     }
 
     .layout-topbar-logo {

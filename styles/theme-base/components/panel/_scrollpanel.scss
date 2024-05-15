@@ -4,7 +4,7 @@
 		border: $scrollPanelTrackBorder;
 
 		&:focus-visible {
-			@include focused();
+			@include focused;
 		}
 	}
 }

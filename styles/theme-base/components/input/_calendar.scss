@@ -1,13 +1,13 @@
 .p-calendar {
     &.p-invalid.p-component > .p-inputtext {
-        @include invalid-input();
+        @include invalid-input;
     }
 }
 
 .p-datepicker {
     padding: $calendarPadding;
-    background: $calendarInlineBg;
     color: $calendarTextColor;
+    background: $calendarInlineBg;
     border: $calendarBorder;
     border-radius: $borderRadius;
 
@@ -23,17 +23,17 @@
 
     .p-datepicker-header {
         padding: $calendarHeaderPadding;
+        margin: $inputListHeaderMargin;
+        font-weight: $calendarHeaderFontWeight;
         color: $calendarHeaderTextColor;
         background: $calendarInlineHeaderBg;
-        font-weight: $calendarHeaderFontWeight;
-        margin: $inputListHeaderMargin;
         border-bottom: $calendarHeaderBorder;
-        border-top-right-radius: $borderRadius;
         border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
 
         .p-datepicker-prev,
         .p-datepicker-next {
-            @include action-icon();
+            @include action-icon;
         }
 
         .p-datepicker-title {
@@ -41,10 +41,10 @@
 
             .p-datepicker-year,
             .p-datepicker-month {
+                padding: $calendarHeaderCellPadding;
+                font-weight: $calendarHeaderFontWeight;
                 color: $calendarHeaderTextColor;
                 transition: $actionIconTransition;
-                font-weight: $calendarHeaderFontWeight;
-                padding: $calendarHeaderCellPadding;
 
                 &:enabled:hover {
                     color: $calendarMonthYearHeaderHoverTextColor;
@@ -58,8 +58,8 @@
     }
 
     table {
-        font-size: $fontSize;
         margin: $calendarTableMargin;
+        font-size: $fontSize;
 
         th {
             padding: $calendarHeaderCellPadding;
@@ -76,9 +76,9 @@
             > span {
                 width: $calendarCellDateWidth;
                 height: $calendarCellDateHeight;
+                border: $calendarCellDateBorder;
                 border-radius: $calendarCellDateBorderRadius;
                 transition: $listItemTransition;
-                border: $calendarCellDateBorder;
 
                 &.p-highlight {
                     color: $highlightTextColor;
@@ -86,14 +86,14 @@
                 }
 
                 &:focus {
-                    @include focused();
+                    @include focused;
                 }
             }
 
             &.p-datepicker-today {
                 > span {
-                    background: $calendarCellDateTodayBg;
                     color: $calendarCellDateTodayTextColor;
+                    background: $calendarCellDateTodayBg;
                     border-color: $calendarCellDateTodayBorderColor;
 
                     &.p-highlight {
@@ -115,11 +115,11 @@
     }
 
     .p-timepicker {
-        border-top: $divider;
         padding: $calendarTimePickerPadding;
+        border-top: $divider;
 
         button {
-            @include action-icon();
+            @include action-icon;
 
             &:last-child {
                 margin-top: .2em;
@@ -146,8 +146,8 @@
 
         .p-monthpicker-month {
             padding: $calendarCellDatePadding;
-            transition: $listItemTransition;
             border-radius: $borderRadius;
+            transition: $listItemTransition;
 
             &.p-highlight {
                 color: $highlightTextColor;
@@ -161,8 +161,8 @@
 
         .p-yearpicker-year {
             padding: $calendarCellDatePadding;
-            transition: $listItemTransition;
             border-radius: $borderRadius;
+            transition: $listItemTransition;
 
             &.p-highlight {
                 color: $highlightTextColor;
@@ -173,11 +173,8 @@
 
     &.p-datepicker-multiple-month {
         .p-datepicker-group {
+            padding: 0 $calendarPadding;
             border-left: $divider;
-            padding-right: $calendarPadding;
-            padding-left: $calendarPadding;
-            padding-top: 0;
-            padding-bottom: 0;
 
             &:first-child {
                 padding-left: 0;
@@ -192,13 +189,13 @@
     &:not(.p-disabled) {
         table {
             td {
-                span:not(.p-highlight):not(.p-disabled) {
+                span:not(.p-highlight, .p-disabled) {
                     &:hover {
                         background: $calendarCellDateHoverBg;
                     }
 
                     &:focus {
-                        @include focused();
+                        @include focused;
                     }
                 }
             }
@@ -212,7 +209,7 @@
                     }
 
                     &:focus {
-                        @include focused();
+                        @include focused;
                     }
                 }
             }
@@ -226,7 +223,7 @@
                     }
 
                     &:focus {
-                        @include focused();
+                        @include focused;
                     }
                 }
             }

@@ -1,25 +1,25 @@
 .p-inputtext {
-    font-family: var(--font-family);
-    font-feature-settings: var(--font-feature-settings, normal);
-    font-size: $inputTextFontSize;
-    color: $inputTextColor;
-    background: $inputBg;
     padding: $inputPadding;
-    border: $inputBorder;
-    transition: $formElementTransition;
+    font-family: var(--font-family);
+    font-size: $inputTextFontSize;
+    font-feature-settings: var(--font-feature-settings, normal);
+    color: $inputTextColor;
     appearance: none;
+    background: $inputBg;
+    border: $inputBorder;
     border-radius: $borderRadius;
+    transition: $formElementTransition;
 
     &:enabled:hover {
         border-color: $inputHoverBorderColor;
     }
 
     &:enabled:focus {
-        @include focused-input();
+        @include focused-input;
     }
 
     &.p-invalid.p-component {
-        @include invalid-input();
+        @include invalid-input;
     }
 
     &.p-inputtext-sm {

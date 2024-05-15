@@ -2,22 +2,22 @@
 
 .p-chips {
     .p-chips-multiple-container {
-        padding: math.div(nth($inputPadding, 1), 2) nth($inputPadding, 2);
         gap: $inlineSpacing;
+        padding: math.div(nth($inputPadding, 1), 2) nth($inputPadding, 2);
 
         &:not(.p-disabled):hover {
             border-color: $inputHoverBorderColor;
         }
 
         &:not(.p-disabled).p-focus {
-            @include focused-input();
+            @include focused-input;
         }
 
         .p-chips-token {
             padding: math.div(nth($inputPadding, 1), 2) nth($inputPadding, 2);
             margin-right: $inlineSpacing;
-            background: $highlightBg;
             color: $chipTextColor;
+            background: $highlightBg;
             border-radius: $chipBorderRadius;
 
             .p-chips-token-icon {
@@ -29,17 +29,17 @@
             padding: math.div(nth($inputPadding, 1), 2) 0;
                 
             input {
-                font-family: var(--font-family);
-                font-feature-settings: var(--font-feature-settings, normal);
-                font-size: $inputTextFontSize;
-                color: $textColor;
                 padding: 0;
                 margin: 0;
+                font-family: var(--font-family);
+                font-size: $inputTextFontSize;
+                font-feature-settings: var(--font-feature-settings, normal);
+                color: $textColor;
             }
         }
     }
 
     &.p-invalid.p-component > .p-inputtext {
-        @include invalid-input();
+        @include invalid-input;
     }
 }

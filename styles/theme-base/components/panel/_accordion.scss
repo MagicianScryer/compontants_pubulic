@@ -2,10 +2,10 @@
     .p-accordion-header {
         .p-accordion-header-link {
             padding: $accordionHeaderPadding;
-            border: $accordionHeaderBorder;
+            font-weight: $accordionHeaderFontWeight;
             color: $accordionHeaderTextColor;
             background: $accordionHeaderBg;
-            font-weight: $accordionHeaderFontWeight;
+            border: $accordionHeaderBorder;
             border-radius: $borderRadius;
             transition: $listItemTransition;
 
@@ -17,33 +17,33 @@
         &:not(.p-disabled) {
             .p-accordion-header-link {
                 &:focus-visible {
-                    @include focused();
+                    @include focused;
                 }
             }
         }
 
-        &:not(.p-highlight):not(.p-disabled):hover {
+        &:not(.p-highlight, .p-disabled):hover {
             .p-accordion-header-link {
+                color: $accordionHeaderTextHoverColor;
                 background: $accordionHeaderHoverBg;
                 border-color: $accordionHeaderHoverBorderColor;
-                color: $accordionHeaderTextHoverColor;
             }
         }
 
         &:not(.p-disabled).p-highlight {
             .p-accordion-header-link {
+                color: $accordionHeaderTextActiveColor;
                 background: $accordionHeaderActiveBg;
                 border-color: $accordionHeaderActiveBorderColor;
-                color: $accordionHeaderTextActiveColor;
                 border-bottom-right-radius: 0;
                 border-bottom-left-radius: 0;
             }
 
             &:hover {
                 .p-accordion-header-link {
-                    border-color: $accordionHeaderActiveHoverBorderColor;
-                    background: $accordionHeaderActiveHoverBg;
                     color: $accordionHeaderTextActiveHoverColor;
+                    background: $accordionHeaderActiveHoverBg;
+                    border-color: $accordionHeaderActiveHoverBorderColor;
                 }
             }
         }
@@ -51,14 +51,11 @@
 
     .p-accordion-content {
         padding: $accordionContentPadding;
-        border: $accordionContentBorder;
-        background: $accordionContentBg;
         color: $accordionContentTextColor;
+        background: $accordionContentBg;
+        border: $accordionContentBorder;
         border-top: 0;
-        border-top-right-radius: 0;
-        border-top-left-radius: 0;
-        border-bottom-right-radius: $borderRadius;
-        border-bottom-left-radius: $borderRadius;
+        border-radius: 0 0 $borderRadius $borderRadius;
     }
 
     .p-accordion-tab {
@@ -82,7 +79,7 @@
                         border-top: 0 none;
                     }
 
-                    &:not(.p-highlight):not(.p-disabled):hover,
+                    &:not(.p-highlight, .p-disabled):hover,
                     &:not(.p-disabled).p-highlight:hover {
                         .p-accordion-header-link {
                             border-top: 0 none;
@@ -94,8 +91,8 @@
             &:first-child {
                 .p-accordion-header {
                     .p-accordion-header-link {
-                        border-top-right-radius: $borderRadius;
                         border-top-left-radius: $borderRadius;
+                        border-top-right-radius: $borderRadius;
                     }
                 }
             }

@@ -1,10 +1,10 @@
 .p-timeline {
     .p-timeline-event-marker {
-        border: $timelineEventMarkerBorder; 
-        border-radius: $timelineEventMarkerBorderRadius;
         width: $timelineEventMarkerWidth;
         height: $timelineEventMarkerHeight;
         background-color: $timelineEventMarkerBackground;
+        border: $timelineEventMarkerBorder; 
+        border-radius: $timelineEventMarkerBorderRadius;
     }
 
     .p-timeline-event-connector {

@@ -1,6 +1,6 @@
 .p-sidebar {
-    background: $overlayContentBg;
     color: $panelContentTextColor;
+    background: $overlayContentBg;
     border: $overlayContentBorder;
     box-shadow: $overlayContainerShadow;
 
@@ -9,7 +9,7 @@
 
         .p-sidebar-close,
         .p-sidebar-icon {
-            @include action-icon();
+            @include action-icon;
         }
 
         & + .p-sidebar-content {

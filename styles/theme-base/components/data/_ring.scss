@@ -2,7 +2,8 @@
     .p-ring-content {
         .p-ring-prev,
         .p-ring-next {
-            @include action-icon();
+            @include action-icon;
+
             margin: $inlineSpacing;
         }
     }
@@ -15,11 +16,11 @@
             margin-bottom: $inlineSpacing;
            
             button {
-                background-color: $carouselIndicatorBg;
                 width: $carouselIndicatorWidth;
                 height: $carouselIndicatorHeight;
-                transition: $actionIconTransition;
+                background-color: $carouselIndicatorBg;
                 border-radius: $carouselIndicatorBorderRadius;
+                transition: $actionIconTransition;
 
                 &:hover {
                     background: $carouselIndicatorHoverBg;
@@ -28,8 +29,8 @@
 
             &.p-highlight {
                 button {
-                    background: $highlightBg;
                     color: $highlightTextColor;
+                    background: $highlightBg;
                 }
             }
         }

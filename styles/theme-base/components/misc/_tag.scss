@@ -1,31 +1,31 @@
 @use 'sass:math';
 
 .p-tag {
-    background: $badgeBg;
-    color: $badgeTextColor;
+    padding: $tagPadding;
     font-size: $badgeFontSize;
     font-weight: $badgeFontWeight;
-    padding: $tagPadding;
+    color: $badgeTextColor;
+    background: $badgeBg;
     border-radius: $borderRadius;
 
     &.p-tag-success {
-        background-color: $successButtonBg;
         color: $successButtonTextColor;
+        background-color: $successButtonBg;
     }
 
     &.p-tag-info {
-        background-color: $infoButtonBg;
         color: $infoButtonTextColor;
+        background-color: $infoButtonBg;
     }
 
     &.p-tag-warning {
-        background-color: $warningButtonBg;
         color: $warningButtonTextColor;
+        background-color: $warningButtonBg;
     }
 
     &.p-tag-danger {
-        background-color: $dangerButtonBg;
         color: $dangerButtonTextColor;
+        background-color: $dangerButtonBg;
     }
 
     .p-tag-icon {

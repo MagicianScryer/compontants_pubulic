@@ -1,21 +1,21 @@
 .p-cascadeselect {
     background: $inputBg;
     border: $inputBorder;
-    transition: $formElementTransition;
     border-radius: $borderRadius;
+    transition: $formElementTransition;
 
     &:not(.p-disabled):hover {
         border-color: $inputHoverBorderColor;
     }
 
     &:not(.p-disabled).p-focus {
-        @include focused-input();
+        @include focused-input;
     }
 
     .p-cascadeselect-label {
+        padding: $inputPadding;
         background: transparent;
         border: 0 none;
-        padding: $inputPadding;
 
         &.p-placeholder {
             color: $inputPlaceholderTextColor;
@@ -28,21 +28,21 @@
     }
 
     .p-cascadeselect-trigger {
-        background: transparent;
-        color: $inputIconColor;
         width: $inputGroupAddOnMinWidth;
+        color: $inputIconColor;
+        background: transparent;
         border-top-right-radius: $borderRadius;
         border-bottom-right-radius: $borderRadius;
     }
 
     &.p-invalid.p-component {
-        @include invalid-input();
+        @include invalid-input;
     }
 }
 
 .p-cascadeselect-panel {
-    background: $inputOverlayBg;
     color: $inputListTextColor;
+    background: $inputOverlayBg;
     border: $inputOverlayBorder;
     border-radius: $borderRadius;
     box-shadow: $inputOverlayShadow;
@@ -52,17 +52,17 @@
 
         .p-cascadeselect-item {
             margin: $inputListItemMargin;
-            border: $inputListItemBorder;
             color: $inputListItemTextColor;
             background: $inputListItemBg;
-            transition: $listItemTransition;
+            border: $inputListItemBorder;
             border-radius: $inputListItemBorderRadius;
+            transition: $listItemTransition;
 
             .p-cascadeselect-item-content {
                 padding: $inputListItemPadding;
 
                 &:focus {
-                    @include focused-listitem();
+                    @include focused-listitem;
                 }
             }
 
@@ -71,7 +71,7 @@
                 background: $highlightBg;
             }
 
-            &:not(.p-highlight):not(.p-disabled):hover {
+            &:not(.p-highlight, .p-disabled):hover {
                 color: $inputListItemTextHoverColor;
                 background: $inputListItemHoverBg;
             }

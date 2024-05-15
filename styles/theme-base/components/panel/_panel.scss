@@ -1,18 +1,18 @@
 .p-panel {
     .p-panel-header {
-        border: $panelHeaderBorder;
         padding: $panelHeaderPadding;
-        background: $panelHeaderBg;
         color: $panelHeaderTextColor;
-        border-top-right-radius: $borderRadius;
+        background: $panelHeaderBg;
+        border: $panelHeaderBorder;
         border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
 
         .p-panel-title {
             font-weight: $panelHeaderFontWeight;
         }
 
         .p-panel-header-icon {
-            @include action-icon();
+            @include action-icon;
         }
     }
 
@@ -24,19 +24,19 @@
 
     .p-panel-content {
         padding: $panelContentPadding;
-        border: $panelContentBorder;
-        background: $panelContentBg;
         color: $panelContentTextColor;
+        background: $panelContentBg;
+        border: $panelContentBorder;
+        border-top: 0 none;
         border-bottom-right-radius: $borderRadius;
         border-bottom-left-radius: $borderRadius;
-        border-top: 0 none;
     }
 
     .p-panel-footer {
         padding: $panelFooterPadding;
-        border: $panelFooterBorder;
-        background: $panelFooterBg;
         color: $panelFooterTextColor;
+        background: $panelFooterBg;
+        border: $panelFooterBorder;
         border-top: 0 none;
     }
 }

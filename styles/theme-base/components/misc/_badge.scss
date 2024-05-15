@@ -1,77 +1,77 @@
 .p-badge {
-    background: $badgeBg;
-    color: $badgeTextColor;
-    font-size: $badgeFontSize;
-    font-weight: $badgeFontWeight;
     min-width: $badgeMinWidth;
     height: $badgeHeight;
+    font-size: $badgeFontSize;
+    font-weight: $badgeFontWeight;
     line-height: $badgeHeight;
+    color: $badgeTextColor;
+    background: $badgeBg;
 
     &.p-badge-secondary {
-        background-color: $secondaryButtonBg;
         color: $secondaryButtonTextColor;
+        background-color: $secondaryButtonBg;
     }
 
     &.p-badge-success {
-        background-color: $successButtonBg;
         color: $successButtonTextColor;
+        background-color: $successButtonBg;
     }
 
     &.p-badge-info {
-        background-color: $infoButtonBg;
         color: $infoButtonTextColor;
+        background-color: $infoButtonBg;
     }
 
     &.p-badge-warning {
-        background-color: $warningButtonBg;
         color: $warningButtonTextColor;
+        background-color: $warningButtonBg;
     }
 
     &.p-badge-danger {
-        background-color: $dangerButtonBg;
         color: $dangerButtonTextColor;
+        background-color: $dangerButtonBg;
     }
 
     &.p-badge-lg {
-        font-size: 1.5 * $badgeFontSize;
         min-width: 1.5 * $badgeMinWidth;
         height: 1.5 * $badgeHeight;
+        font-size: 1.5 * $badgeFontSize;
         line-height: 1.5 * $badgeHeight;
     }
 
     &.p-badge-xl {
-        font-size: 2 * $badgeFontSize;
         min-width: 2 * $badgeMinWidth;
         height: 2 * $badgeHeight;
+        font-size: 2 * $badgeFontSize;
         line-height: 2 * $badgeHeight;
     }
 }
 
 .p-tag {
-    background: $badgeBg;
-    color: $badgeTextColor;
+    padding: $tagPadding;
     font-size: $badgeFontSize;
     font-weight: $badgeFontWeight;
-    padding: $tagPadding;
+    color: $badgeTextColor;
+    background: $badgeBg;
     border-radius: $borderRadius;
 
     &.p-tag-success {
-        background-color: $successButtonBg;
         color: $successButtonTextColor;
+        background-color: $successButtonBg;
     }
 
     &.p-tag-info {
-        background-color: $infoButtonBg;
         color: $infoButtonTextColor;
+        background-color: $infoButtonBg;
     }
 
     &.p-tag-warning {
-        background-color: $warningButtonBg;
         color: $warningButtonTextColor;
+        background-color: $warningButtonBg;
     }
 
     &.p-tag-danger {
-        background-color: $dangerButtonBg;
         color: $dangerButtonTextColor;
+        background-color: $dangerButtonBg;
     }
 }

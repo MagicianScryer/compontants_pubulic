@@ -10,65 +10,65 @@
     }
 
     .p-treetable-header {
-        background: $tableHeaderBg;
-        color: $tableHeaderTextColor;
-        border: $tableHeaderBorder;
-        border-width: $tableHeaderBorderWidth;
         padding: $tableHeaderPadding;
         font-weight: $tableHeaderFontWeight;
+        color: $tableHeaderTextColor;
+        background: $tableHeaderBg;
+        border: $tableHeaderBorder;
+        border-width: $tableHeaderBorderWidth;
     }
 
     .p-treetable-footer {
-        background: $tableFooterBg;
-        color: $tableFooterTextColor;
-        border: $tableFooterBorder;
-        border-width: $tableFooterBorderWidth;
         padding: $tableFooterPadding;
         font-weight: $tableFooterFontWeight;
+        color: $tableFooterTextColor;
+        background: $tableFooterBg;
+        border: $tableFooterBorder;
+        border-width: $tableFooterBorderWidth;
     }
 
     .p-treetable-thead > tr > th {
-        text-align: $tableCellContentAlignment;
         padding: $tableHeaderCellPadding;
-        border: $tableHeaderCellBorder;
-        border-width: $tableHeaderCellBorderWidth;
         font-weight: $tableHeaderCellFontWeight;
         color: $tableHeaderCellTextColor;
+        text-align: $tableCellContentAlignment;
         background: $tableHeaderCellBg;
+        border: $tableHeaderCellBorder;
+        border-width: $tableHeaderCellBorderWidth;
         transition: $listItemTransition;
     }
 
     .p-treetable-tfoot > tr > td {
-        text-align: $tableCellContentAlignment;
         padding: $tableFooterCellPadding;
-        border: $tableFooterCellBorder;
-        border-width: $tableFooterCellBorderWidth;
         font-weight: $tableFooterCellFontWeight;
         color: $tableFooterCellTextColor;
+        text-align: $tableCellContentAlignment;
         background: $tableFooterCellBg;
+        border: $tableFooterCellBorder;
+        border-width: $tableFooterCellBorderWidth;
     }
 
     .p-sortable-column {
         outline-color: $focusOutlineColor;
 
         .p-sortable-column-icon {
-            color: $tableHeaderCellIconColor;
             margin-left: $inlineSpacing;
+            color: $tableHeaderCellIconColor;
         }
 
         .p-sortable-column-badge {
-            border-radius: 50%;
-            height: $tableSortableColumnBadgeSize;
             min-width: $tableSortableColumnBadgeSize;
+            height: $tableSortableColumnBadgeSize;
+            margin-left: $inlineSpacing;
             line-height: $tableSortableColumnBadgeSize;
             color: $highlightTextColor;
             background: $highlightBg;
-            margin-left: $inlineSpacing;
+            border-radius: 50%;
         }
 
         &:not(.p-highlight):hover {
-            background: $tableHeaderCellHoverBg;
             color: $tableHeaderCellTextHoverColor;
+            background: $tableHeaderCellHoverBg;
 
             .p-sortable-column-icon {
                 color: $tableHeaderCellIconHoverColor;
@@ -76,8 +76,8 @@
         }
 
         &.p-highlight {
-            background: $tableHeaderCellHighlightBg;
             color: $tableHeaderCellHighlightTextColor;
+            background: $tableHeaderCellHighlightBg;
 
             .p-sortable-column-icon {
                 color: $tableHeaderCellHighlightTextColor;
@@ -87,18 +87,19 @@
 
     .p-treetable-tbody {
         > tr {
-            background: $tableBodyRowBg;
             color: $tableBodyRowTextColor;
+            background: $tableBodyRowBg;
             transition: $listItemTransition;
 
             > td {
+                padding: $tableBodyCellPadding;
                 text-align: $tableCellContentAlignment;
                 border: $tableBodyCellBorder;
                 border-width: $tableBodyCellBorderWidth;
-                padding: $tableBodyCellPadding;
 
                 .p-treetable-toggler {
-                    @include action-icon();
+                    @include action-icon;
+
                     margin-right: $inlineSpacing;
                     
                     & + .p-checkbox {
@@ -119,8 +120,8 @@
             }
 
             &.p-highlight {
-                background: $highlightBg;
                 color: $highlightTextColor;
+                background: $highlightBg;
 
                 .p-treetable-toggler {
                     color: $highlightTextColor;
@@ -137,8 +138,8 @@
     &.p-treetable-selectable,
     &.p-treetable-hoverable-rows {
         .p-treetable-tbody > tr:not(.p-highlight):hover {
-            background: $tableBodyRowHoverBg;
             color: $tableBodyRowTextHoverColor;
+            background: $tableBodyRowHoverBg;
 
             .p-treetable-toggler {
                 color: $tableBodyRowTextHoverColor;
@@ -166,19 +167,19 @@
 
     &.p-treetable-gridlines {
         .p-treetable-header {
-            border-width: 1px 1px 0 1px;
+            border-width: 1px 1px 0;
         }
 
         .p-treetable-footer {
-            border-width: 0 1px 1px 1px;
+            border-width: 0 1px 1px;
         }
 
         .p-treetable-top {
-            border-width: 0 1px 0 1px;
+            border-width: 0 1px;
         }
 
         .p-treetable-bottom {
-            border-width: 0 1px 1px 1px;
+            border-width: 0 1px 1px;
         }
 
         .p-treetable-thead {
@@ -212,8 +213,8 @@
                 background: $tableBodyRowEvenBg;
     
                 &.p-highlight {
-                    background: $highlightBg;
                     color: $highlightTextColor;
+                    background: $highlightBg;
     
                     .p-row-toggler {
                         color: $highlightTextColor;

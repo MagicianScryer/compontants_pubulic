@@ -1,11 +1,11 @@
 .p-contextmenu {
-	padding: $verticalMenuPadding;
-	background: $overlayMenuBg;
-	color: $menuTextColor;
-	border: $overlayMenuBorder;
-	box-shadow: $overlayMenuShadow;
-	border-radius: $borderRadius;
 	width: $menuWidth;
+	padding: $verticalMenuPadding;
+	color: $menuTextColor;
+	background: $overlayMenuBg;
+	border: $overlayMenuBorder;
+	border-radius: $borderRadius;
+	box-shadow: $overlayMenuShadow;
 
 	.p-contextmenu-root-list {
 		outline: 0 none;
@@ -15,17 +15,17 @@
 		padding: $verticalMenuPadding;
 		background: $overlayMenuBg;
 		border: $overlayMenuBorder;
-		box-shadow: $overlayMenuShadow;
 		border-radius: $borderRadius;
+		box-shadow: $overlayMenuShadow;
 	}
 
 	.p-menuitem {
-		@include menuitem-link();
+		@include menuitem-link;
 	}
 
 	.p-menuitem-separator {
-		border-top: $divider;
 		margin: $menuSeparatorMargin;
+		border-top: $divider;
 	}
 
 	.p-submenu-icon {
